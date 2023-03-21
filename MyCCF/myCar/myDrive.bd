@@ -2,7 +2,7 @@ classType myCar.myDrive
 blockdiagramSpecification Main {
 	methodBody move {
 		outPin active {
-			connection_29, connection_81, connection_56, connection_91, connection_2, connection_48, connection_36, connection_100
+			connection_29, connection_81, connection_56, connection_91, connection_2, connection_48, connection_36, connection_100, connection_108, connection_114
 		}
 	}
 	simpleIdentifier BrakeMomentum at (181, 31) {
@@ -398,6 +398,104 @@ blockdiagramSpecification Main {
 		label at (0, -1)
 		inPin outPin {
 			connection_103, connection_102
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier momentum at (51, 545) {
+		label at (0, -1)
+		inPin outPin {
+			connection_105
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier mass at (61, 505) {
+		label at (0, -1)
+		outPin {
+			connection_104
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	multiplication at (151, 516) {
+		inPin connection_104 {
+			bendpoints (50, 0)
+		}
+		inPin connection_105 {
+			bendpoints (50, 0)
+		}
+		outPin {
+			connection_107
+		}
+	}
+	simpleIdentifier ds at (131, 455) {
+		label at (0, -1)
+		inPin outPin {
+			connection_106
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	multiplication at (221, 476) {
+		inPin connection_106 {
+			bendpoints (40, 0)
+		}
+		inPin connection_107 {
+			bendpoints (30, 0)
+		}
+		outPin {
+			connection_109
+		}
+	}
+	simpleIdentifier energy at (291, 485) {
+		label at (0, -1)
+		inPin connection_109
+		outPin {
+			connection_110
+		}
+		sequenceCall {
+			inPin connection_108
+		}
+	}
+	multiplication at (371, 496) {
+		inPin connection_110 {
+			bendpoints (30, 0)
+		}
+		inPin connection_117
+		outPin {
+			connection_113
+		}
+	}
+	simpleIdentifier battery at (491, 505) {
+		label at (0, -1)
+		inPin connection_115 {
+			bendpoints (20, 0)
+		}
+		outPin {
+			connection_116
+		}
+		sequenceCall {
+			inPin connection_114
+		}
+	}
+	subtraction at (431, 506) {
+		inPin connection_113
+		inPin connection_116 {
+			bendpoints (0, 40), (-110, 40)
+		}
+		outPin {
+			connection_115
+		}
+	}
+	methodArgumentIdentifier move.mydt at (281, 515) {
+		label at (0, -1)
+		outPin {
+			connection_117
 		}
 		sequenceCall {
 			inPin

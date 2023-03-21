@@ -1,13 +1,13 @@
 <?SCHEMA schemaVersion="1.0"?>
 <SignalSourcesConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.SignalSources.xsd" xsi:type="ETAS.EE.Data.SignalSourcesConfigurationType">
   <SignalSourcesData xsi:type="ETAS.EE.Data.PluginDataListType">
-    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="IDa31a45bb-33a8-41d7-962c-ae5ecc5534ca" pluginID="System" rootFolder="System_Files">
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID805fbdd0-c398-4b8a-847c-d9327b28e13d" pluginID="System" rootFolder="System_Files">
       <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
-        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID9eae5fb2-ff80-4bc4-8803-7aff57fab766" type="" name="Configuration" file="Configuration.xml" />
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID7d0407e2-f2c6-49bd-9097-5b270ad76680" type="" name="Configuration" file="Configuration.xml" />
       </Documents>
     </Item>
   </SignalSourcesData>
   <SignalSourceDeclarations xsi:type="ETAS.EE.Data.SignalSourceDeclarationListType">
-    <Item xsi:type="ETAS.EE.Data.SignalSourceDeclarationType" id="ID716824ec-fd02-4a2d-860e-b9d44c6382ab" type="VP" signalSourceId="System" name="PC_PC" active="true" />
+    <Item xsi:type="ETAS.EE.Data.SignalSourceDeclarationType" id="ID32c538f4-2853-4cbf-a150-dcfb63231733" type="VP" signalSourceId="System" name="PC_PC" active="true" />
   </SignalSourceDeclarations>
 </SignalSourcesConfiguration>

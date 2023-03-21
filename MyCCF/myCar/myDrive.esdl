@@ -8,6 +8,9 @@ import resources.s;
 import resources.kmh;
 import resources.g;
 import resources.a;
+import resources.kg;
+import resources.W;
+import resources.Wh;
 
 class myDrive {
 	characteristic curve_real_a BrakeMomentum = {{0.0, 1.0, 40.0, 60.0, 80.0, 100.0}, {0.0[a], 0.0[a], -1.0[a], -2.0[a], -3.0[a], -4.0[a]}};
@@ -24,8 +27,11 @@ class myDrive {
 	characteristic private m TrackSize = 4413.58[m];
 	@get
 	kmh v = 0.0[kmh];
+	characteristic kg mass = 0.0[kg];
+	W energy;
+	Wh battery = 1000.0[Wh];
 
-	@generated("blockdiagram", "8979d915")
+	@generated("blockdiagram", "79460066")
 	public void move(real in powerCtrl, real in brakeCtrl, s in mydt, g in myg) {
 		v = (((BrakeMomentum.getAt(brakeCtrl) + momentum + AirFriction.getAt(v) + (myg * (dh / ds))) * mydt) + v); // Main/move 1
 		if (v < 0.0[kmh]) {
@@ -43,5 +49,7 @@ class myDrive {
 		dh = (h - Landscape.getAt(dist)); // Main/move 6
 		h = Landscape.getAt(dist); // Main/move 7
 		momentum = EngineMomentum.getAt(powerCtrl, v); // Main/move 8
+		energy = (ds * (mass * momentum)); // Main/move 9
+		battery = ((energy * mydt) - battery); // Main/move 10
 	}
 }

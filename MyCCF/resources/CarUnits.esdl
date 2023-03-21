@@ -8,3 +8,9 @@ unit km = 1000.0 * m; // kilometer
 unit kmh = km / h;   // kilometer per hour
 unit a = m / s^2;   // acceleration
 unit g = 9.81 * a;  // earth constant
+
+unit kg; // kilogram
+unit N = kg * a; // newton
+unit W = N * m; // energy
+unit Wh = W * h; // watthour
+unit kWh = 1000.0 * Wh; // kilo-watthour

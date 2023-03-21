@@ -10,5 +10,16 @@
         <Property name="DEFAULT_ACQUISITION_TASK" type="StringProperty">Task0</Property>
       </PropertySet>
     </PropertySet>
+    <PropertySet name="SignalSources">
+      <PropertySet name="StateManagement">
+        <Property name="DownloadAfterOpenExperiment" type="BoolProperty">False</Property>
+        <Property name="StartMeasurementAfterDownload" type="BoolProperty">False</Property>
+        <Property name="StartSimulationAfterDownload" type="BoolProperty">False</Property>
+        <Property name="ExecuteStartUpStepsWhenAutomated" type="BoolProperty">False</Property>
+        <Property name="SILSimulationTime" type="DoubleProperty">-1</Property>
+        <Property name="SILSimulationTimeUnit" type="StringProperty">seconds</Property>
+        <Property name="SILSimulationMode" type="StringProperty">Adaptive</Property>
+      </PropertySet>
+    </PropertySet>
   </PropertySet>
 </PropertySets>

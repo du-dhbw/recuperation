@@ -468,7 +468,7 @@ blockdiagramSpecification Main {
 		}
 		inPin connection_117
 		outPin {
-			connection_113
+			connection_118
 		}
 	}
 	simpleIdentifier battery at (491, 505) {
@@ -477,17 +477,17 @@ blockdiagramSpecification Main {
 			bendpoints (20, 0)
 		}
 		outPin {
-			connection_116
+			connection_119
 		}
 		sequenceCall {
 			inPin connection_114
 		}
 	}
-	subtraction at (431, 506) {
-		inPin connection_113
-		inPin connection_116 {
-			bendpoints (0, 40), (-110, 40)
+	subtraction at (431, 486) {
+		inPin connection_119 {
+			bendpoints (0, -40), (-110, -40)
 		}
+		inPin connection_118
 		outPin {
 			connection_115
 		}

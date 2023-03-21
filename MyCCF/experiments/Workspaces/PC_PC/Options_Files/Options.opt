@@ -4,6 +4,7 @@
     <PropertySet name="WorkspaceHandling">
       <Property name="OpenMode" type="StringProperty">LastExperiment</Property>
       <Property name="DefaultExperiment" type="StringProperty" />
+      <Property name="LastWorkspaceLocation" type="StringProperty">C:\Users\david\ETAS\ASCET-DEVELOPER-7.7.0\projekt\MyCCF\experiments\Workspaces\PC_PC\PC_PC.eew</Property>
     </PropertySet>
     <PropertySet name="ETargetINTECRIO">
       <PropertySet name="Options">

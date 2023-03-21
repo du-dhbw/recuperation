@@ -27,11 +27,11 @@ class myDrive {
 	characteristic private m TrackSize = 4413.58[m];
 	@get
 	kmh v = 0.0[kmh];
-	characteristic kg mass = 0.0[kg];
+	characteristic kg mass = 1500.0[kg];
 	W energy;
 	Wh battery = 1000.0[Wh];
 
-	@generated("blockdiagram", "79460066")
+	@generated("blockdiagram", "81a195b3")
 	public void move(real in powerCtrl, real in brakeCtrl, s in mydt, g in myg) {
 		v = (((BrakeMomentum.getAt(brakeCtrl) + momentum + AirFriction.getAt(v) + (myg * (dh / ds))) * mydt) + v); // Main/move 1
 		if (v < 0.0[kmh]) {
@@ -50,6 +50,6 @@ class myDrive {
 		h = Landscape.getAt(dist); // Main/move 7
 		momentum = EngineMomentum.getAt(powerCtrl, v); // Main/move 8
 		energy = (ds * (mass * momentum)); // Main/move 9
-		battery = ((energy * mydt) - battery); // Main/move 10
+		battery = (battery - (energy * mydt)); // Main/move 10
 	}
 }

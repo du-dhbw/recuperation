@@ -1,0 +1,15 @@
+Component myCar.TargetVelocity size ( 14 , 8 ) backgroundColor #ffffff {
+	labelPosition ( 40 , -79 )
+	methodLayout inc {
+		pin inc ( Bottom , 1 )
+	}
+	methodLayout dec {
+		pin dec ( Bottom , 11 )
+	}
+	methodLayout velocity {
+		pin velocity ( Right , 3 )
+	}
+	methodLayout reset {
+		pin arg ( Left , 3 )
+	}
+}

@@ -1,0 +1,94 @@
+classType myCar.SplitSignal
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_1
+		}
+	}
+	simpleIdentifier plus at (461, 75) {
+		label at (0, -1)
+		inPin connection_5 {
+			bendpoints (30, 0), (30, -50)
+		}
+		outPin sequenceCall at (0, 26) {
+			inPin connection_4 {
+				bendpoints (140, 0), (140, -20)
+			}
+		}
+	}
+	simpleIdentifier minus at (461, 285) {
+		label at (0, -1)
+		inPin connection_8
+		outPin sequenceCall {
+			inPin connection_7 {
+				bendpoints (0, 110)
+			}
+		}
+	}
+	methodArgumentIdentifier calc.arg at (81, 125) {
+		label at (0, -1)
+		outPin {
+			connection_5, connection_6, connection_3
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier GZ at (181, 121) size (4, 3) backgroundColor #ffffff {
+		label at (0, 1)
+		methodCall SystemLib.Comparators.GreaterZero.value {
+			argumentPin val at (left, 0) connection_3
+			returnPin at (right, 0) {
+				connection_2
+			}
+			sequenceCall at (0, 6) {
+				inPin
+			}
+		}
+	}
+	ifElse at (261, 121) {
+		inPin connection_2
+		ifControlFlowOutPin {
+			connection_4, connection_9
+		}
+		elseControlFlowOutPin {
+			connection_7, connection_11
+		}
+		sequenceCall {
+			inPin connection_1
+		}
+	}
+	negation at (191, 281) {
+		inPin connection_6 {
+			bendpoints (30, 0), (30, 160)
+		}
+		outPin {
+			connection_8
+		}
+	}
+	simpleIdentifier minus at (461, 145) {
+		label at (0, -1)
+		inPin connection_10 {
+			bendpoints (40, 0), (40, -20)
+		}
+		outPin sequenceCall {
+			inPin connection_9
+		}
+	}
+	simpleIdentifier plus at (461, 205) {
+		label at (0, -1)
+		inPin connection_12 {
+			bendpoints (40, 0), (40, 40)
+		}
+		outPin sequenceCall at (-10, 26) {
+			inPin connection_11 {
+				bendpoints (0, 80)
+			}
+		}
+	}
+	literal Numeric "0.0" at (361, 163) size (49, 0) {
+		outPin {
+			connection_12, connection_10
+		}
+	}
+}

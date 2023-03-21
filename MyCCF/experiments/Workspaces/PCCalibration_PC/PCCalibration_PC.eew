@@ -1,0 +1,22 @@
+<?SCHEMA schemaVersion="1.0"?>
+<Workspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.Workspace.xsd" xsi:type="ETAS.EE.Data.WorkspaceType">
+  <PluginData xsi:type="ETAS.EE.Data.PluginDataListType">
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="IDa89832ce-18d1-4dba-a77a-bd446f6b0abc" pluginID="Options" rootFolder="Options_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="IDb304afcb-f817-4619-bf65-a8bc62e1bb8c" type="" name="Options" file="Options.opt" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID547497a7-4da2-4f1c-afae-7f9db0ccd43d" pluginID="SignalSourceManager" rootFolder="SignalSourceManager_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="IDe24f402c-7f42-4a3d-a520-b741411bf965" type="" name="SignalSourcesData" file="SignalSources.xml" />
+      </Documents>
+    </Item>
+  </PluginData>
+  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType">
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="ID11e0f096-ae24-4315-a43f-19006ea332f3" path="D:\ATrain\_r\Duale_Hochschule_Stuttgart\2023\asd-ws\MyCCF\experiments\Experiments\system\PCCalibration_PC\PCCalibration_PC.eex" hintPath="..\..\Experiments\system\PCCalibration_PC\PCCalibration_PC.eex" />
+  </RecentExperiments>
+  <WorkspaceInfo xsi:type="ETAS.EE.Data.WorkspaceInfoType">
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="IDfd71dc40-5239-4d05-b13a-74022600f4d4" Created="2023-03-15T06:07:00.583Z" LastOpened="2023-03-18T19:39:31.077Z" LastSaved="2023-03-18T19:40:44.375Z" />
+    <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="IDab9a4828-dadf-4f95-9634-62bafe3a4089" Created="3.7.10.314" LastSaved="3.7.10.314" MinRequired="3.3.1" />
+  </WorkspaceInfo>
+</Workspace>

@@ -1,0 +1,88 @@
+classType myCar.Driver
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_1, connection_3, connection_5, connection_7, connection_9
+		}
+	}
+	simpleIdentifier resources.DriverMessages.power at (541, 105) {
+		label at (0, -1)
+		inPin connection_2
+		sequenceCall at (-10, -14) {
+			inPin connection_1
+		}
+	}
+	simpleIdentifier resources.DriverMessages.brake at (541, 165) {
+		label at (0, -1)
+		inPin connection_4
+		sequenceCall at (-10, -14) {
+			inPin connection_3
+		}
+	}
+	simpleIdentifier power at (411, 105) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier brake at (411, 165) {
+		label at (0, -1)
+		outPin {
+			connection_4
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.DriverMessages.on at (541, 235) {
+		label at (0, -1)
+		inPin connection_6
+		sequenceCall {
+			inPin connection_5
+		}
+	}
+	simpleIdentifier on at (411, 235) {
+		label at (0, -1)
+		outPin {
+			connection_6
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.DriverMessages.increment at (541, 305) {
+		label at (0, -1)
+		inPin connection_8
+		sequenceCall {
+			inPin connection_7
+		}
+	}
+	simpleIdentifier resources.DriverMessages.decrement at (541, 375) {
+		label at (0, -1)
+		inPin connection_10
+		sequenceCall {
+			inPin connection_9
+		}
+	}
+	simpleIdentifier inc at (411, 305) {
+		label at (0, -1)
+		outPin {
+			connection_8
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier dec at (411, 375) {
+		label at (0, -1)
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

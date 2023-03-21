@@ -1,0 +1,154 @@
+classType myCar.TargetVelocity
+blockdiagramSpecification Main {
+	methodBody inc {
+		outPin {
+			connection_12
+		}
+	}
+	methodBody dec {
+		outPin {
+			connection_3
+		}
+	}
+	methodBody velocity {
+		outPin active {
+			connection_18, connection_23
+		}
+	}
+	methodBody reset {
+		outPin {
+			connection_15
+		}
+	}
+	simpleIdentifier v at (281, 155) {
+		label at (0, -1)
+		inPin connection_4 {
+			bendpoints (40, 0), (40, -50), (-140, -50), (-140, -10)
+		}
+		outPin {
+			connection_1
+		}
+		sequenceCall {
+			inPin connection_3
+		}
+	}
+	simpleIdentifier dv at (281, 195) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	subtraction at (371, 156) {
+		inPin connection_1
+		inPin connection_2 {
+			bendpoints (50, 0)
+		}
+		outPin {
+			connection_4
+		}
+	}
+	simpleIdentifier mn at (91, 355) {
+		label at (0, -1)
+		outPin {
+			connection_22
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier mx at (181, 375) {
+		label at (0, -1)
+		outPin {
+			connection_21
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier v at (321, 345) {
+		label at (0, -1)
+		inPin connection_19 {
+			bendpoints (20, 0), (20, -10)
+		}
+		outPin {
+			connection_24, connection_20
+		}
+		sequenceCall {
+			inPin connection_18
+		}
+	}
+	addition at (181, 46) {
+		inPin connection_11
+		inPin connection_14 {
+			bendpoints (50, 0)
+		}
+		outPin {
+			connection_13
+		}
+	}
+	simpleIdentifier dv at (91, 85) {
+		label at (0, -1)
+		outPin {
+			connection_14
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier v at (91, 45) {
+		label at (0, -1)
+		inPin connection_13 {
+			bendpoints (40, 0), (40, -50), (-140, -50), (-140, -10)
+		}
+		outPin {
+			connection_11
+		}
+		sequenceCall {
+			inPin connection_12
+		}
+	}
+	methodArgumentIdentifier reset.arg at (451, 235) {
+		label at (0, -1)
+		outPin {
+			connection_16
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier v at (591, 235) {
+		label at (0, -1)
+		inPin connection_16
+		outPin sequenceCall {
+			inPin connection_15
+		}
+	}
+	maximum at (151, 336) {
+		inPin connection_20 {
+			bendpoints (40, 0), (40, -40), (-230, -40), (-230, -10)
+		}
+		inPin connection_22
+		outPin {
+			connection_17
+		}
+	}
+	minimum at (241, 346) {
+		inPin connection_17
+		inPin connection_21 {
+			bendpoints (10, 0), (10, -10)
+		}
+		outPin {
+			connection_19
+		}
+	}
+	return at (501, 345) {
+		label at (0, 0)
+		inPin connection_24
+		sequenceCall {
+			inPin connection_23
+		}
+	}
+}

@@ -1,0 +1,91 @@
+classType myCar.myCar
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_87, connection_19
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (621, 95) {
+		label at (0, -1)
+		inPin connection_20
+		sequenceCall at (-10, -14) {
+			inPin connection_19
+		}
+	}
+	simpleIdentifier g at (241, 225) {
+		label at (0, -1)
+		outPin {
+			connection_11
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at (61, 95) {
+		label at (0, -1)
+		outPin {
+			connection_3
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.brake at (61, 145) {
+		label at (0, -1)
+		outPin {
+			connection_1
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier SystemLib.Miscellaneous.DeltaTimeService.deltaT at (231, 275) {
+		label at (-30, -1)
+		inPin outPin {
+			connection_43
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	multiplication at (321, 286) {
+		inPin connection_43 {
+			bendpoints (30, 0), (30, 10)
+		}
+		inPin connection_42 {
+			bendpoints (10, 0), (10, -10)
+		}
+		outPin {
+			connection_16
+		}
+	}
+	literal unit resources.s "1.0" at (241, 313) size (49, 0) {
+		outPin {
+			connection_42
+		}
+	}
+	complexIdentifier myDrive_instance at (151, 61) size (38, 13) {
+		label at (0, 1)
+		methodCall myCar.myDrive.move {
+			argumentPin powerCtrl at (left, 3) connection_3
+			argumentPin brakeCtrl at (left, 8) connection_1
+			argumentPin mydt at (bottom, 31) connection_16 {
+				bendpoints (110, 0)
+			}
+			argumentPin myg at (bottom, 23) connection_11 {
+				bendpoints (110, 0)
+			}
+			sequenceCall at (-50, -54) {
+				inPin connection_87
+			}
+		}
+		elementCall (myCar.myDrive.v) {
+			returnPin at (right, 3) {
+				connection_20
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+}

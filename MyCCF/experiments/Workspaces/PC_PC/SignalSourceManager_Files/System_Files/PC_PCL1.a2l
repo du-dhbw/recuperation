@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 2592091947
+		         /* programm id */ 2592095325
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -85,7 +85,21 @@
 		    ALIGNMENT_FLOAT64_IEEE 8 
 		/end MOD_COMMON
 
-		/begin CHARACTERISTIC myCar.myCar.myDrive_instance.BrakeMomentum
+		/begin MEASUREMENT myCar.myCar.myDrive_instance.Battery_inst.battery
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0.0
+			/* upper limit        */ 1000.0
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 0
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin CHARACTERISTIC myCar.myCar.myDrive_instance.BrakeMomentuC
 			/* long identifier    */ ""
 			/* type               */ CURVE
 			/* ecu address        */ 0x0
@@ -103,7 +117,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 1
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 2
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -133,7 +147,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 2
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 3
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -155,7 +169,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 0
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 1
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -177,7 +191,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 3
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 4
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -191,7 +205,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 11
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 13
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -205,7 +219,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 7
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 9
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -219,7 +233,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 9
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 11
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -233,7 +247,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 13
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 14
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -247,7 +261,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 8
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 10
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -261,7 +275,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 5
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 6
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -275,23 +289,9 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 14
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 15
 			/end IF_DATA
 		/end MEASUREMENT
-
-		/begin CHARACTERISTIC myCar.myCar.myDrive_instance.mass
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 12
-			/end IF_DATA
-		/end CHARACTERISTIC
 
 		/begin MEASUREMENT myCar.myCar.myDrive_instance.energy
 			/* long identifier    */ ""
@@ -303,21 +303,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 10
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.myDrive_instance.battery
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 12
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -334,14 +320,42 @@
 				/* axis type          */ STD_AXIS
 				/* input quantity     */ myCar.myCar.myDrive_instance.v
 				/* conversion         */ esdl_ident
-				/* max axis point     */ 3
+				/* max axis point     */ 2
 				/* lower limit        */ -3.4028234663852886E+38
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 4
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 5
 			/end IF_DATA
 		/end CHARACTERISTIC
+
+		/begin MEASUREMENT myCar.myCar.myDrive_instance.brakeMomentum
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 8
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myDrive_instance.battery
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 7
+			/end IF_DATA
+		/end MEASUREMENT
 
 		/begin CHARACTERISTIC myCar.myCar.g
 			/* long identifier    */ ""
@@ -354,6 +368,20 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
 			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 1
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC myCar.myCar.weight
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 0
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -1121,6 +1149,7 @@
 			""
 			/begin DEF_CHARACTERISTIC
 				myCar.myCar.g
+				myCar.myCar.weight
 			/end DEF_CHARACTERISTIC
 			/begin IN_MEASUREMENT
 				resources.CarMessages.brake
@@ -1137,16 +1166,16 @@
 		/begin FUNCTION myCar.myCar.myDrive_instance
 			""
 			/begin DEF_CHARACTERISTIC
-				myCar.myCar.myDrive_instance.BrakeMomentum
+				myCar.myCar.myDrive_instance.BrakeMomentuC
 				myCar.myCar.myDrive_instance.EngineMomentum
 				myCar.myCar.myDrive_instance.AirFriction
 				myCar.myCar.myDrive_instance.Landscape
 				myCar.myCar.myDrive_instance.TrackSize
-				myCar.myCar.myDrive_instance.mass
 				myCar.myCar.myDrive_instance.RecuperationAccel
 			/end DEF_CHARACTERISTIC
 			/begin LOC_MEASUREMENT
 				myCar.myCar.myDrive_instance.battery
+				myCar.myCar.myDrive_instance.brakeMomentum
 				myCar.myCar.myDrive_instance.dh
 				myCar.myCar.myDrive_instance.dist
 				myCar.myCar.myDrive_instance.ds
@@ -1154,6 +1183,15 @@
 				myCar.myCar.myDrive_instance.h
 				myCar.myCar.myDrive_instance.momentum
 				myCar.myCar.myDrive_instance.v
+			/end LOC_MEASUREMENT
+			/begin SUB_FUNCTION
+				myCar.myCar.myDrive_instance.Battery_inst
+			/end SUB_FUNCTION
+		/end FUNCTION
+		/begin FUNCTION myCar.myCar.myDrive_instance.Battery_inst
+			""
+			/begin LOC_MEASUREMENT
+				myCar.myCar.myDrive_instance.Battery_inst.battery
 			/end LOC_MEASUREMENT
 		/end FUNCTION
 		/begin FUNCTION myCar.CCF
@@ -1437,6 +1475,7 @@
 			ROOT
 			/begin REF_CHARACTERISTIC
 				myCar.myCar.g
+				myCar.myCar.weight
 			/end REF_CHARACTERISTIC
 			/begin SUB_GROUP
 				myCar.myCar.myDrive_instance
@@ -1445,16 +1484,16 @@
 		/begin GROUP myCar.myCar.myDrive_instance
 			""
 			/begin REF_CHARACTERISTIC
-				myCar.myCar.myDrive_instance.BrakeMomentum
+				myCar.myCar.myDrive_instance.BrakeMomentuC
 				myCar.myCar.myDrive_instance.EngineMomentum
 				myCar.myCar.myDrive_instance.AirFriction
 				myCar.myCar.myDrive_instance.Landscape
 				myCar.myCar.myDrive_instance.TrackSize
-				myCar.myCar.myDrive_instance.mass
 				myCar.myCar.myDrive_instance.RecuperationAccel
 			/end REF_CHARACTERISTIC
 			/begin REF_MEASUREMENT
 				myCar.myCar.myDrive_instance.battery
+				myCar.myCar.myDrive_instance.brakeMomentum
 				myCar.myCar.myDrive_instance.dh
 				myCar.myCar.myDrive_instance.dist
 				myCar.myCar.myDrive_instance.ds
@@ -1462,6 +1501,15 @@
 				myCar.myCar.myDrive_instance.h
 				myCar.myCar.myDrive_instance.momentum
 				myCar.myCar.myDrive_instance.v
+			/end REF_MEASUREMENT
+			/begin SUB_GROUP
+				myCar.myCar.myDrive_instance.Battery_inst
+			/end SUB_GROUP
+		/end GROUP
+		/begin GROUP myCar.myCar.myDrive_instance.Battery_inst
+			""
+			/begin REF_MEASUREMENT
+				myCar.myCar.myDrive_instance.Battery_inst.battery
 			/end REF_MEASUREMENT
 		/end GROUP
 		/begin GROUP resources.CarMessages

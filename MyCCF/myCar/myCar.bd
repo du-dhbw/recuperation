@@ -98,4 +98,10 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
+	simpleIdentifier weight at (111, 335) {
+		label at (0, -1)
+		outPin sequenceCall {
+			inPin
+		}
+	}
 }

@@ -1,0 +1,83 @@
+classType myCar.Battery
+blockdiagramSpecification Main {
+	methodBody getBattery {
+		outPin active {
+			connection_6, connection_9
+		}
+	}
+	simpleIdentifier myCar.myCar.weight at (131, 125) {
+		label at (0, -1)
+		outPin {
+			connection_1
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	multiplication at (221, 146) {
+		inPin connection_1 {
+			bendpoints (50, 0)
+		}
+		inPin connection_2
+		outPin {
+			connection_3
+		}
+	}
+	methodArgumentIdentifier getBattery.momentum at (131, 165) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	multiplication at (311, 156) {
+		inPin connection_3
+		inPin connection_4 {
+			bendpoints (50, 0)
+		}
+		outPin {
+			connection_5
+		}
+	}
+	methodArgumentIdentifier getBattery.ds at (221, 225) {
+		label at (0, -1)
+		outPin {
+			connection_4
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier battery at (461, 165) {
+		label at (0, -1)
+		inPin connection_7 {
+			bendpoints (30, 0)
+		}
+		outPin {
+			connection_10, connection_8
+		}
+		sequenceCall {
+			inPin connection_6
+		}
+	}
+	subtraction at (391, 166) {
+		inPin connection_8 {
+			bendpoints (0, -30), (-120, -30)
+		}
+		inPin connection_5 {
+			bendpoints (10, 0), (10, 20)
+		}
+		outPin {
+			connection_7
+		}
+	}
+	return at (551, 165) {
+		label at (0, 0)
+		inPin connection_10
+		sequenceCall {
+			inPin connection_9
+		}
+	}
+}

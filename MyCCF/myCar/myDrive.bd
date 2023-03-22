@@ -2,10 +2,10 @@ classType myCar.myDrive
 blockdiagramSpecification Main {
 	methodBody move {
 		outPin active {
-			connection_29, connection_81, connection_56, connection_91, connection_2, connection_48, connection_36, connection_100, connection_108, connection_114, connection_126
+			connection_29, connection_81, connection_56, connection_91, connection_2, connection_48, connection_36, connection_100, connection_149, connection_159
 		}
 	}
-	simpleIdentifier BrakeMomentum at (181, 31) {
+	simpleIdentifier BrakeMomentuC at (181, 31) {
 		label at (0, 1)
 		inPin connection_6
 		outPin {
@@ -24,16 +24,19 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	addition at (451, 46) {
+	addition at (451, 46) size (2, 5) {
 		inPin connection_10
 		inPin connection_4 {
 			bendpoints (20, 0), (20, -50)
 		}
 		inPin connection_42 {
-			bendpoints (170, 0), (170, -110)
+			bendpoints (170, 0), (170, -120)
 		}
-		inPin connection_52 {
-			bendpoints (20, 0), (20, -170)
+		inPin connection_151 {
+			bendpoints (70, 0), (70, -160)
+		}
+		inPin connection_145 {
+			bendpoints (30, 0)
 		}
 		outPin {
 			connection_26
@@ -109,16 +112,16 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	multiplication at (381, 246) {
+	multiplication at (381, 326) {
 		inPin connection_55
 		inPin connection_51 {
 			bendpoints (10, 0), (10, -30)
 		}
 		outPin {
-			connection_52
+			connection_145
 		}
 	}
-	simpleIdentifier h at (21, 275) {
+	simpleIdentifier h at (21, 355) {
 		label at (20, -1)
 		inPin outPin {
 			connection_47
@@ -127,7 +130,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier dh at (241, 285) {
+	simpleIdentifier dh at (241, 365) {
 		label at (10, -1)
 		inPin connection_49
 		outPin {
@@ -137,7 +140,7 @@ blockdiagramSpecification Main {
 			inPin connection_48
 		}
 	}
-	subtraction at (191, 276) {
+	subtraction at (191, 356) {
 		inPin connection_47
 		inPin connection_35 {
 			bendpoints (10, 0), (10, -40)
@@ -146,7 +149,7 @@ blockdiagramSpecification Main {
 			connection_49
 		}
 	}
-	division at (321, 286) {
+	division at (321, 366) {
 		inPin connection_46
 		inPin connection_45 {
 			bendpoints (40, 0), (40, -100)
@@ -155,7 +158,7 @@ blockdiagramSpecification Main {
 			connection_51
 		}
 	}
-	simpleIdentifier Landscape at (101, 321) {
+	simpleIdentifier Landscape at (101, 401) {
 		label at (0, 1)
 		inPin connection_25 {
 			bendpoints (10, 0)
@@ -167,7 +170,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier dist at (21, 335) {
+	simpleIdentifier dist at (21, 415) {
 		label at (20, -1)
 		inPin outPin {
 			connection_25
@@ -176,14 +179,14 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier h at (221, 335) {
+	simpleIdentifier h at (221, 415) {
 		label at (20, -1)
 		inPin connection_37
 		outPin sequenceCall at (0, -14) {
 			inPin connection_36
 		}
 	}
-	simpleIdentifier v at (21, 395) {
+	simpleIdentifier v at (21, 475) {
 		label at (20, -1)
 		inPin outPin {
 			connection_14
@@ -192,7 +195,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier ds at (221, 405) {
+	simpleIdentifier ds at (221, 485) {
 		label at (10, -1)
 		inPin connection_57
 		outPin {
@@ -202,7 +205,7 @@ blockdiagramSpecification Main {
 			inPin connection_56
 		}
 	}
-	simpleIdentifier dist at (391, 415) {
+	simpleIdentifier dist at (391, 495) {
 		label at (20, -1)
 		inPin connection_17
 		outPin {
@@ -210,11 +213,11 @@ blockdiagramSpecification Main {
 		}
 		sequenceCall at (-10, -14) {
 			inPin connection_16 {
-				bendpoints (120, 0), (120, 70), (-420, 70), (-420, 100)
+				bendpoints (120, 0), (120, 70), (-420, 70), (-420, 180)
 			}
 		}
 	}
-	multiplication at (131, 396) {
+	multiplication at (131, 476) {
 		inPin connection_14
 		inPin connection_5 {
 			bendpoints (50, 0), (50, -20)
@@ -223,7 +226,7 @@ blockdiagramSpecification Main {
 			connection_57
 		}
 	}
-	addition at (321, 406) {
+	addition at (321, 486) {
 		inPin connection_44
 		inPin connection_13 {
 			bendpoints (20, 0), (20, 40), (-130, 40), (-130, 10)
@@ -291,7 +294,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier move.mydt at (21, 435) {
+	methodArgumentIdentifier move.mydt at (21, 515) {
 		label at (0, -1)
 		outPin {
 			connection_5
@@ -300,7 +303,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier move.myg at (281, 245) {
+	methodArgumentIdentifier move.myg at (281, 325) {
 		label at (0, -1)
 		outPin {
 			connection_55
@@ -397,98 +400,13 @@ blockdiagramSpecification Main {
 	simpleIdentifier v at (31, 155) {
 		label at (0, -1)
 		inPin outPin {
-			connection_103, connection_102
+			connection_103, connection_142, connection_102
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-	simpleIdentifier momentum at (51, 545) {
-		label at (0, -1)
-		inPin outPin {
-			connection_105
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier mass at (61, 505) {
-		label at (0, -1)
-		outPin {
-			connection_104
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	multiplication at (151, 516) {
-		inPin connection_104 {
-			bendpoints (50, 0)
-		}
-		inPin connection_105 {
-			bendpoints (50, 0)
-		}
-		outPin {
-			connection_107
-		}
-	}
-	simpleIdentifier ds at (131, 455) {
-		label at (0, -1)
-		inPin outPin {
-			connection_106
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	multiplication at (221, 476) {
-		inPin connection_106 {
-			bendpoints (40, 0)
-		}
-		inPin connection_107 {
-			bendpoints (30, 0)
-		}
-		outPin {
-			connection_109
-		}
-	}
-	simpleIdentifier energy at (291, 485) {
-		label at (0, -1)
-		inPin connection_109
-		outPin {
-			connection_121
-		}
-		sequenceCall {
-			inPin connection_108
-		}
-	}
-	simpleIdentifier battery at (461, 505) {
-		label at (0, -1)
-		inPin connection_115 {
-			bendpoints (20, 0)
-		}
-		outPin {
-			connection_119
-		}
-		sequenceCall {
-			inPin connection_114
-		}
-	}
-	subtraction at (401, 486) {
-		inPin connection_119 {
-			bendpoints (0, -40), (-110, -40)
-		}
-		inPin connection_121 {
-			bendpoints (0, 20)
-		}
-		outPin {
-			connection_115
-		}
-	}
-	freeComment at (541, 491) {
-		"Bei Beschleunigung von Batterie abziehen\r\n"
-	}
-	methodArgumentIdentifier move.recupCtrl at (51, 665) {
+	methodArgumentIdentifier move.recupCtrl at (81, 275) {
 		label at (0, -1)
 		outPin {
 			connection_138
@@ -497,88 +415,20 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier mass at (211, 565) {
-		label at (0, -1)
-		outPin {
-			connection_122
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	multiplication at (281, 606) {
-		inPin connection_122 {
-			bendpoints (30, 0)
-		}
-		inPin connection_133 {
-			bendpoints (80, 0)
-		}
-		outPin {
-			connection_125
-		}
-	}
-	simpleIdentifier ds at (301, 545) {
-		label at (0, -1)
-		inPin outPin {
-			connection_124
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	multiplication at (381, 576) {
-		inPin connection_124 {
-			bendpoints (30, 0)
-		}
-		inPin connection_125 {
-			bendpoints (60, 0)
-		}
-		outPin {
-			connection_130
-		}
-	}
-	addition at (481, 596) {
-		inPin connection_128 {
-			bendpoints (0, -40), (-120, -40)
-		}
-		inPin connection_130 {
-			bendpoints (0, 30)
-		}
-		outPin {
-			connection_127
-		}
-	}
-	simpleIdentifier battery at (551, 605) {
-		label at (0, -1)
-		inPin connection_127
-		outPin {
-			connection_128
-		}
-		sequenceCall {
-			inPin connection_126
-		}
-	}
-	multiplication at (161, 626) {
+	multiplication at (191, 236) {
 		inPin connection_136 {
 			bendpoints (30, 0)
 		}
 		inPin connection_137
 		outPin {
-			connection_133
+			connection_150
 		}
 	}
-	simpleIdentifier v at (11, 615) {
-		label at (0, -1)
-		inPin outPin {
-			connection_135
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier RecuperationAccel at (71, 601) {
+	simpleIdentifier RecuperationAccel at (101, 211) {
 		label at (0, 1)
-		inPin connection_135
+		inPin connection_142 {
+			bendpoints (0, 70)
+		}
 		outPin {
 			connection_136
 		}
@@ -586,7 +436,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	division at (121, 666) {
+	division at (151, 276) {
 		inPin connection_138 {
 			bendpoints (31, 0)
 		}
@@ -597,9 +447,79 @@ blockdiagramSpecification Main {
 			connection_137
 		}
 	}
-	literal Numeric "100.0" at (51, 713) size (49, 0) {
+	literal Numeric "100.0" at (81, 323) size (49, 0) {
 		outPin {
 			connection_139
+		}
+	}
+	simpleIdentifier brakeMomentum at (321, 235) {
+		label at (0, -1)
+		inPin connection_150 {
+			bendpoints (90, 0)
+		}
+		outPin {
+			connection_151
+		}
+		sequenceCall {
+			inPin connection_149
+		}
+	}
+	complexIdentifier Battery_inst at (191, 571) size (14, 8) {
+		label at (0, 1)
+		methodCall myCar.Battery.getBattery {
+			argumentPin momentum at (left, 0) connection_156 {
+				bendpoints (20, 0)
+			}
+			argumentPin ds at (left, 5) connection_153
+			returnPin at (right, 0) {
+				connection_160
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier ds at (91, 625) {
+		label at (0, -1)
+		inPin outPin {
+			connection_153
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier momentum at (41, 555) {
+		label at (0, -1)
+		inPin outPin {
+			connection_154
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier brakeMomentum at (41, 585) {
+		label at (0, -1)
+		inPin outPin {
+			connection_155
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	addition at (121, 556) {
+		inPin connection_154
+		inPin connection_155 {
+			bendpoints (30, 0)
+		}
+		outPin {
+			connection_156
+		}
+	}
+	simpleIdentifier battery at (391, 575) {
+		label at (0, -1)
+		inPin connection_160
+		outPin sequenceCall {
+			inPin connection_159
 		}
 	}
 }

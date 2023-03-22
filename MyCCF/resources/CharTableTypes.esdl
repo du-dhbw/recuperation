@@ -6,6 +6,7 @@ type curve_m is table m -> m;
 type curve_s is table s -> real;
 type curve_kmh is table kmh -> a;
 type curve_m_kmh is table m -> kmh;
+type curve_recup_a is table kmh -> a;
 
 type map_real_real is table real, real -> real;
 type map_real_kmh is table real, kmh -> a;

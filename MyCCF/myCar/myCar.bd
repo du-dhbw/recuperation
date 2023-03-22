@@ -2,7 +2,7 @@ classType myCar.myCar
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_87, connection_19
+			connection_45, connection_19
 		}
 	}
 	simpleIdentifier resources.CarMessages.v at (621, 95) {
@@ -21,7 +21,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.power at (61, 95) {
+	simpleIdentifier resources.CarMessages.power at (61, 85) {
 		label at (0, -1)
 		outPin {
 			connection_3
@@ -30,7 +30,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.brake at (61, 145) {
+	simpleIdentifier resources.CarMessages.brake at (61, 125) {
 		label at (0, -1)
 		outPin {
 			connection_1
@@ -67,8 +67,9 @@ blockdiagramSpecification Main {
 	complexIdentifier myDrive_instance at (151, 61) size (38, 13) {
 		label at (0, 1)
 		methodCall myCar.myDrive.move {
-			argumentPin powerCtrl at (left, 3) connection_3
-			argumentPin brakeCtrl at (left, 8) connection_1
+			argumentPin powerCtrl at (left, 2) connection_3
+			argumentPin brakeCtrl at (left, 6) connection_1
+			argumentPin recupCtrl at (left, 10) connection_46
 			argumentPin mydt at (bottom, 31) connection_16 {
 				bendpoints (110, 0)
 			}
@@ -76,7 +77,7 @@ blockdiagramSpecification Main {
 				bendpoints (110, 0)
 			}
 			sequenceCall at (-50, -54) {
-				inPin connection_87
+				inPin connection_45
 			}
 		}
 		elementCall (myCar.myDrive.v) {
@@ -86,6 +87,15 @@ blockdiagramSpecification Main {
 			sequenceCall {
 				inPin
 			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.recuperation at (61, 165) {
+		label at (0, -1)
+		outPin {
+			connection_46
+		}
+		sequenceCall {
+			inPin
 		}
 	}
 }

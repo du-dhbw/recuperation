@@ -2,7 +2,7 @@ classType myCar.Driver
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_1, connection_3, connection_5, connection_7, connection_9
+			connection_1, connection_3, connection_5, connection_7, connection_9, connection_11
 		}
 	}
 	simpleIdentifier resources.DriverMessages.power at (541, 105) {
@@ -83,6 +83,22 @@ blockdiagramSpecification Main {
 		}
 		sequenceCall {
 			inPin
+		}
+	}
+	simpleIdentifier recuperation at (411, 55) {
+		label at (0, -1)
+		outPin {
+			connection_12
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.recuperation at (531, 55) {
+		label at (0, -1)
+		inPin connection_12
+		sequenceCall {
+			inPin connection_11
 		}
 	}
 }

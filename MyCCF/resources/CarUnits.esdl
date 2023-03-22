@@ -11,6 +11,7 @@ unit g = 9.81 * a;  // earth constant
 
 unit kg; // kilogram
 unit N = kg * a; // newton
-unit W = N * m; // energy
+unit J = N * m; // energy
+unit W = J / s;
 unit Wh = W * h; // watthour
 unit kWh = 1000.0 * Wh; // kilo-watthour

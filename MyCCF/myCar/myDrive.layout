@@ -1,4 +1,4 @@
-Component   myCar.myDrive size ( 38 , 13 ) {
+Component       myCar.myDrive size ( 38 , 13 ) {
 	labelPosition ( 0 , 1 )
 	methodLayout move {
 		pin powerCtrl ( Left , 3 )

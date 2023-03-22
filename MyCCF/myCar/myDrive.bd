@@ -2,7 +2,7 @@ classType myCar.myDrive
 blockdiagramSpecification Main {
 	methodBody move {
 		outPin active {
-			connection_29, connection_81, connection_56, connection_91, connection_2, connection_48, connection_36, connection_100, connection_108, connection_114
+			connection_29, connection_81, connection_56, connection_91, connection_2, connection_48, connection_36, connection_100, connection_108, connection_114, connection_126
 		}
 	}
 	simpleIdentifier BrakeMomentum at (181, 31) {
@@ -456,22 +456,13 @@ blockdiagramSpecification Main {
 		label at (0, -1)
 		inPin connection_109
 		outPin {
-			connection_110
+			connection_121
 		}
 		sequenceCall {
 			inPin connection_108
 		}
 	}
-	multiplication at (371, 496) {
-		inPin connection_110 {
-			bendpoints (30, 0)
-		}
-		inPin connection_117
-		outPin {
-			connection_118
-		}
-	}
-	simpleIdentifier battery at (491, 505) {
+	simpleIdentifier battery at (461, 505) {
 		label at (0, -1)
 		inPin connection_115 {
 			bendpoints (20, 0)
@@ -483,22 +474,132 @@ blockdiagramSpecification Main {
 			inPin connection_114
 		}
 	}
-	subtraction at (431, 486) {
+	subtraction at (401, 486) {
 		inPin connection_119 {
 			bendpoints (0, -40), (-110, -40)
 		}
-		inPin connection_118
+		inPin connection_121 {
+			bendpoints (0, 20)
+		}
 		outPin {
 			connection_115
 		}
 	}
-	methodArgumentIdentifier move.mydt at (281, 515) {
+	freeComment at (541, 491) {
+		"Bei Beschleunigung von Batterie abziehen\r\n"
+	}
+	methodArgumentIdentifier move.recupCtrl at (51, 665) {
 		label at (0, -1)
 		outPin {
-			connection_117
+			connection_138
 		}
 		sequenceCall {
 			inPin
+		}
+	}
+	simpleIdentifier mass at (211, 565) {
+		label at (0, -1)
+		outPin {
+			connection_122
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	multiplication at (281, 606) {
+		inPin connection_122 {
+			bendpoints (30, 0)
+		}
+		inPin connection_133 {
+			bendpoints (80, 0)
+		}
+		outPin {
+			connection_125
+		}
+	}
+	simpleIdentifier ds at (301, 545) {
+		label at (0, -1)
+		inPin outPin {
+			connection_124
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	multiplication at (381, 576) {
+		inPin connection_124 {
+			bendpoints (30, 0)
+		}
+		inPin connection_125 {
+			bendpoints (60, 0)
+		}
+		outPin {
+			connection_130
+		}
+	}
+	addition at (481, 596) {
+		inPin connection_128 {
+			bendpoints (0, -40), (-120, -40)
+		}
+		inPin connection_130 {
+			bendpoints (0, 30)
+		}
+		outPin {
+			connection_127
+		}
+	}
+	simpleIdentifier battery at (551, 605) {
+		label at (0, -1)
+		inPin connection_127
+		outPin {
+			connection_128
+		}
+		sequenceCall {
+			inPin connection_126
+		}
+	}
+	multiplication at (161, 626) {
+		inPin connection_136 {
+			bendpoints (30, 0)
+		}
+		inPin connection_137
+		outPin {
+			connection_133
+		}
+	}
+	simpleIdentifier v at (11, 615) {
+		label at (0, -1)
+		inPin outPin {
+			connection_135
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier RecuperationAccel at (71, 601) {
+		label at (0, 1)
+		inPin connection_135
+		outPin {
+			connection_136
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	division at (121, 666) {
+		inPin connection_138 {
+			bendpoints (31, 0)
+		}
+		inPin connection_139 {
+			bendpoints (20, 0)
+		}
+		outPin {
+			connection_137
+		}
+	}
+	literal Numeric "100.0" at (51, 713) size (49, 0) {
+		outPin {
+			connection_139
 		}
 	}
 }

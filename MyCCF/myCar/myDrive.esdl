@@ -9,8 +9,9 @@ import resources.kmh;
 import resources.g;
 import resources.a;
 import resources.kg;
-import resources.W;
 import resources.Wh;
+import resources.J;
+import resources.curve_recup_a;
 
 class myDrive {
 	characteristic curve_real_a BrakeMomentum = {{0.0, 1.0, 40.0, 60.0, 80.0, 100.0}, {0.0[a], 0.0[a], -1.0[a], -2.0[a], -3.0[a], -4.0[a]}};
@@ -28,11 +29,12 @@ class myDrive {
 	@get
 	kmh v = 0.0[kmh];
 	characteristic kg mass = 1500.0[kg];
-	W energy;
+	J energy;
 	Wh battery = 1000.0[Wh];
+	characteristic curve_recup_a RecuperationAccel[3] = {{0.0[kmh], 160.0[kmh]}, {0.0[a], 4.0[a]}};
 
-	@generated("blockdiagram", "81a195b3")
-	public void move(real in powerCtrl, real in brakeCtrl, s in mydt, g in myg) {
+	@generated("blockdiagram", "104d2c84")
+	public void move(real in powerCtrl, real in brakeCtrl, real in recupCtrl, s in mydt, g in myg) {
 		v = (((BrakeMomentum.getAt(brakeCtrl) + momentum + AirFriction.getAt(v) + (myg * (dh / ds))) * mydt) + v); // Main/move 1
 		if (v < 0.0[kmh]) {
 			v = 0.0[kmh]; // Main/move 2/if-then 1
@@ -50,6 +52,7 @@ class myDrive {
 		h = Landscape.getAt(dist); // Main/move 7
 		momentum = EngineMomentum.getAt(powerCtrl, v); // Main/move 8
 		energy = (ds * (mass * momentum)); // Main/move 9
-		battery = (battery - (energy * mydt)); // Main/move 10
+		battery = (battery - energy); // Main/move 10
+		battery = (battery + (ds * (mass * (RecuperationAccel.getAt(v) * (recupCtrl / 100.0))))); // Main/move 11
 	}
 }

@@ -2,7 +2,7 @@ classType myCar.myDrive
 blockdiagramSpecification Main {
 	methodBody move {
 		outPin active {
-			connection_29, connection_81, connection_56, connection_91, connection_2, connection_48, connection_36
+			connection_29, connection_81
 		}
 	}
 	simpleIdentifier BrakeMomentuC at (181, 31) {
@@ -32,8 +32,8 @@ blockdiagramSpecification Main {
 		inPin connection_167 {
 			bendpoints (60, 0), (60, -130)
 		}
-		inPin connection_145 {
-			bendpoints (30, 0)
+		inPin connection_173 {
+			bendpoints (80, 0), (80, -300)
 		}
 		outPin {
 			connection_26
@@ -88,201 +88,10 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	multiplication at (381, 326) {
-		inPin connection_55
-		inPin connection_51 {
-			bendpoints (10, 0), (10, -30)
-		}
-		outPin {
-			connection_145
-		}
-	}
-	simpleIdentifier h at (21, 355) {
-		label at (20, -1)
-		inPin outPin {
-			connection_47
-		}
-		sequenceCall at (-10, -14) {
-			inPin
-		}
-	}
-	simpleIdentifier dh at (241, 365) {
-		label at (10, -1)
-		inPin connection_49
-		outPin {
-			connection_46
-		}
-		sequenceCall at (0, -14) {
-			inPin connection_48
-		}
-	}
-	subtraction at (191, 356) {
-		inPin connection_47
-		inPin connection_35 {
-			bendpoints (10, 0), (10, -40)
-		}
-		outPin {
-			connection_49
-		}
-	}
-	division at (321, 366) {
-		inPin connection_46
-		inPin connection_45 {
-			bendpoints (40, 0), (40, -100)
-		}
-		outPin {
-			connection_51
-		}
-	}
-	simpleIdentifier Landscape at (101, 401) {
-		label at (0, 1)
-		inPin connection_25 {
-			bendpoints (10, 0)
-		}
-		outPin {
-			connection_37, connection_35
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier dist at (21, 415) {
-		label at (20, -1)
-		inPin outPin {
-			connection_25
-		}
-		sequenceCall at (-10, -14) {
-			inPin
-		}
-	}
-	simpleIdentifier h at (221, 415) {
-		label at (20, -1)
-		inPin connection_37
-		outPin sequenceCall at (0, -14) {
-			inPin connection_36
-		}
-	}
-	simpleIdentifier v at (21, 475) {
-		label at (20, -1)
-		inPin outPin {
-			connection_14
-		}
-		sequenceCall at (-10, -14) {
-			inPin
-		}
-	}
-	simpleIdentifier ds at (221, 485) {
-		label at (10, -1)
-		inPin connection_57
-		outPin {
-			connection_45, connection_44
-		}
-		sequenceCall at (-10, -14) {
-			inPin connection_56
-		}
-	}
-	simpleIdentifier dist at (391, 495) {
-		label at (20, -1)
-		inPin connection_17
-		outPin {
-			connection_13
-		}
-		sequenceCall at (-10, -14) {
-			inPin connection_16 {
-				bendpoints (120, 0), (120, 70), (-420, 70), (-420, 180)
-			}
-		}
-	}
-	multiplication at (131, 476) {
-		inPin connection_14
-		inPin connection_5 {
-			bendpoints (50, 0), (50, -20)
-		}
-		outPin {
-			connection_57
-		}
-	}
-	addition at (321, 486) {
-		inPin connection_44
-		inPin connection_13 {
-			bendpoints (20, 0), (20, 40), (-130, 40), (-130, 10)
-		}
-		outPin {
-			connection_17
-		}
-	}
-	simpleIdentifier dist at (531, 405) {
-		label at (20, -1)
-		inPin outPin {
-			connection_78
-		}
-		sequenceCall at (-10, -14) {
-			inPin
-		}
-	}
-	greater at (661, 406) {
-		inPin connection_78
-		inPin connection_20 {
-			bendpoints (10, 0), (10, -10)
-		}
-		outPin {
-			connection_19
-		}
-	}
-	if at (741, 411) {
-		inPin connection_19
-		ifControlFlowOutPin {
-			connection_53
-		}
-		sequenceCall at (-20, -14) {
-			inPin connection_2
-		}
-	}
-	literal unit resources.m "0.0" at (811, 423) size (49, 0) {
-		outPin {
-			connection_24
-		}
-	}
-	simpleIdentifier TrackSize at (581, 435) {
-		label at (0, -1)
-		outPin {
-			connection_20
-		}
-		sequenceCall at (-10, -14) {
-			inPin
-		}
-	}
-	simpleIdentifier dist at (871, 425) {
-		label at (20, -1)
-		inPin connection_24 {
-			bendpoints (10, 0)
-		}
-		outPin sequenceCall at (-10, -14) {
-			inPin connection_53
-		}
-	}
 	methodArgumentIdentifier move.mydt at (531, 85) {
 		label at (-20, 9)
 		outPin {
 			connection_28
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	methodArgumentIdentifier move.mydt at (21, 515) {
-		label at (0, -1)
-		outPin {
-			connection_5
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	methodArgumentIdentifier move.myg at (281, 325) {
-		label at (0, -1)
-		outPin {
-			connection_55
 		}
 		sequenceCall {
 			inPin
@@ -329,50 +138,6 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	simpleIdentifier ds at (561, 295) {
-		label at (10, -1)
-		inPin outPin {
-			connection_85
-		}
-		sequenceCall at (-10, -14) {
-			inPin
-		}
-	}
-	greater at (671, 296) {
-		inPin connection_85
-		inPin connection_86 {
-			bendpoints (30, 0), (30, -20)
-		}
-		outPin {
-			connection_92
-		}
-	}
-	literal unit resources.m "0.001" at (571, 333) size (49, 0) {
-		outPin {
-			connection_90, connection_86
-		}
-	}
-	simpleIdentifier ds at (841, 345) {
-		label at (10, -1)
-		inPin connection_90 {
-			bendpoints (30, 0), (30, 10)
-		}
-		outPin sequenceCall at (0, -14) {
-			inPin connection_89
-		}
-	}
-	ifElse at (741, 301) {
-		inPin connection_92
-		ifControlFlowOutPin {
-			connection_16
-		}
-		elseControlFlowOutPin {
-			connection_89
-		}
-		sequenceCall {
-			inPin connection_91
-		}
-	}
 	simpleIdentifier v at (21, 125) {
 		label at (0, -1)
 		inPin outPin {
@@ -399,8 +164,8 @@ blockdiagramSpecification Main {
 			argumentPin v at (top, 2) connection_166 {
 				bendpoints (90, 0)
 			}
-			argumentPin ds at (bottom, 6) connection_170 {
-				bendpoints (10, 0)
+			argumentPin ds at (bottom, 6) connection_174 {
+				bendpoints (10, 0), (10, -60), (-80, -60)
 			}
 			returnPin at (right, 0) {
 				connection_167
@@ -410,10 +175,52 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	simpleIdentifier ds at (141, 295) {
+	complexIdentifier Environment_instance at (131, 361) size (14, 8) {
+		label at (0, 1)
+		methodCall myCar.Environment.move {
+			argumentPin myg at (left, 0) connection_172
+			argumentPin mydt at (left, 4) connection_171
+			argumentPin v at (left, 6) connection_175 {
+				bendpoints (30, 0)
+			}
+			returnPin at (right, 1) {
+				connection_173
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		elementCall (myCar.Environment.ds) {
+			returnPin at (right, 0) {
+				connection_174
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+	}
+	methodArgumentIdentifier move.mydt at (31, 405) {
+		label at (0, -1)
+		outPin {
+			connection_171
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier move.myg at (51, 365) {
+		label at (0, -1)
+		outPin {
+			connection_172
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier v at (41, 435) {
 		label at (0, -1)
 		inPin outPin {
-			connection_170
+			connection_175
 		}
 		sequenceCall {
 			inPin

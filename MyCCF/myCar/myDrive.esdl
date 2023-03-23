@@ -24,23 +24,13 @@ class myDrive {
 	kmh v = 0.0[kmh];
 	a brakeMomentum;
 	Drivetrain Drivetrain_instance;
+	Environment Environment_instance;
 
-	@generated("blockdiagram", "41e963fe")
+	@generated("blockdiagram", "db78f113")
 	public void move(real in powerCtrl, real in brakeCtrl, real in recupCtrl, s in mydt, g in myg) {
-		v = (((BrakeMomentuC.getAt(brakeCtrl) + AirFriction.getAt(v) + Drivetrain_instance.drive(powerCtrl, recupCtrl, v, ds) + (myg * (dh / ds))) * mydt) + v); // Main/move 1
+		v = (((BrakeMomentuC.getAt(brakeCtrl) + AirFriction.getAt(v) + Drivetrain_instance.drive(powerCtrl, recupCtrl, v, Environment_instance.ds) + Environment_instance.move(myg, mydt, v)) * mydt) + v); // Main/move 1
 		if (v < 0.0[kmh]) {
 			v = 0.0[kmh]; // Main/move 2/if-then 1
 		} // Main/move 2
-		ds = (v * mydt); // Main/move 3
-		if (ds > 0.001[m]) {
-			dist = (ds + dist); // Main/move 4/if-then 1
-		} else {
-			ds = 0.001[m]; // Main/move 4/if-else 1
-		} // Main/move 4
-		if (dist > TrackSize) {
-			dist = 0.0[m]; // Main/move 5/if-then 1
-		} // Main/move 5
-		dh = (h - Landscape.getAt(dist)); // Main/move 6
-		h = Landscape.getAt(dist); // Main/move 7
 	}
 }

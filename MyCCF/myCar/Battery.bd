@@ -5,18 +5,9 @@ blockdiagramSpecification Main {
 			connection_6, connection_9
 		}
 	}
-	simpleIdentifier myCar.myCar.weight at (131, 125) {
-		label at (0, -1)
-		outPin {
-			connection_1
-		}
-		sequenceCall {
-			inPin
-		}
-	}
 	multiplication at (221, 146) {
-		inPin connection_1 {
-			bendpoints (50, 0)
+		inPin connection_11 {
+			bendpoints (30, 0)
 		}
 		inPin connection_2
 		outPin {
@@ -78,6 +69,15 @@ blockdiagramSpecification Main {
 		inPin connection_10
 		sequenceCall {
 			inPin connection_9
+		}
+	}
+	simpleIdentifier weight at (151, 135) {
+		label at (0, -1)
+		outPin {
+			connection_11
+		}
+		sequenceCall {
+			inPin
 		}
 	}
 }

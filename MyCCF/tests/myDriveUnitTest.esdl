@@ -1,4 +1,4 @@
-package myCar;
+package tests;
 import assertLib.Assert;
 import resources.curve_kmh;
 import resources.curve_m;
@@ -9,6 +9,9 @@ import resources.s;
 import resources.kmh;
 import resources.g;
 import resources.a;
+
+import myCar.Logging;
+import myCar.myDrive;
 
 static class myDriveUnitTest {
 	myDrive tester;

@@ -2,7 +2,7 @@ classType myCar.myDrive
 blockdiagramSpecification Main {
 	methodBody move {
 		outPin active {
-			connection_29, connection_81
+			connection_29, connection_81, connection_177
 		}
 	}
 	simpleIdentifier BrakeMomentuC at (181, 31) {
@@ -33,7 +33,7 @@ blockdiagramSpecification Main {
 			bendpoints (60, 0), (60, -130)
 		}
 		inPin connection_173 {
-			bendpoints (80, 0), (80, -300)
+			bendpoints (310, 0), (310, -300)
 		}
 		outPin {
 			connection_26
@@ -147,7 +147,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier move.recupCtrl at (31, 245) {
+	methodArgumentIdentifier move.recupCtrl at (31, 235) {
 		label at (0, -1)
 		outPin {
 			connection_168
@@ -160,12 +160,12 @@ blockdiagramSpecification Main {
 		label at (0, 1)
 		methodCall myCar.Drivetrain.drive {
 			argumentPin powerCtrl at (left, 1) connection_169
-			argumentPin recupCtrl at (left, 5) connection_168
+			argumentPin recupCtrl at (left, 4) connection_168
 			argumentPin v at (top, 2) connection_166 {
 				bendpoints (90, 0)
 			}
-			argumentPin ds at (bottom, 6) connection_174 {
-				bendpoints (10, 0), (10, -60), (-80, -60)
+			argumentPin ds at (left, 6) connection_174 {
+				bendpoints (0, -20), (-50, -20)
 			}
 			returnPin at (right, 0) {
 				connection_167
@@ -175,15 +175,15 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	complexIdentifier Environment_instance at (131, 361) size (14, 8) {
+	complexIdentifier Environment_instance at (21, 321) size (14, 8) {
 		label at (0, 1)
 		methodCall myCar.Environment.move {
 			argumentPin myg at (left, 0) connection_172
 			argumentPin mydt at (left, 4) connection_171
 			argumentPin v at (left, 6) connection_175 {
-				bendpoints (30, 0)
+				bendpoints (10, 0)
 			}
-			returnPin at (right, 1) {
+			returnPin at (right, 5) {
 				connection_173
 			}
 			sequenceCall {
@@ -192,14 +192,14 @@ blockdiagramSpecification Main {
 		}
 		elementCall (myCar.Environment.ds) {
 			returnPin at (right, 0) {
-				connection_174
+				connection_176, connection_174
 			}
 			sequenceCall at (0, 0) {
 				inPin
 			}
 		}
 	}
-	methodArgumentIdentifier move.mydt at (31, 405) {
+	methodArgumentIdentifier move.mydt at (-59, 365) {
 		label at (0, -1)
 		outPin {
 			connection_171
@@ -208,7 +208,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier move.myg at (51, 365) {
+	methodArgumentIdentifier move.myg at (-29, 325) {
 		label at (0, -1)
 		outPin {
 			connection_172
@@ -217,13 +217,34 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier v at (41, 435) {
+	simpleIdentifier v at (-49, 395) {
 		label at (0, -1)
 		inPin outPin {
 			connection_175
 		}
 		sequenceCall {
 			inPin
+		}
+	}
+	complexIdentifier odo_inst at (271, 281) size (14, 8) {
+		label at (0, 1)
+		methodCall myCar.Odometer.calc {
+			argumentPin ds at (left, 0) connection_176 {
+				bendpoints (0, -40)
+			}
+			returnPin at (right, 1) {
+				connection_178
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier kmstand at (421, 295) {
+		label at (0, -1)
+		inPin connection_178
+		outPin sequenceCall {
+			inPin connection_177
 		}
 	}
 }

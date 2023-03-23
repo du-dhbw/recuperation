@@ -1,0 +1,43 @@
+classType myCar.Odometer
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_1, connection_4
+		}
+	}
+	simpleIdentifier odometer at (341, 115) {
+		label at (0, -1)
+		inPin connection_2
+		outPin {
+			connection_5, connection_3
+		}
+		sequenceCall {
+			inPin connection_1
+		}
+	}
+	addition at (271, 106) {
+		inPin connection_3 {
+			bendpoints (0, -50), (-120, -50)
+		}
+		inPin connection_6
+		outPin {
+			connection_2
+		}
+	}
+	return at (461, 115) {
+		label at (0, 0)
+		inPin connection_5
+		sequenceCall {
+			inPin connection_4
+		}
+	}
+	methodArgumentIdentifier calc.ds at (161, 125) {
+		label at (0, -1)
+		outPin {
+			connection_6
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

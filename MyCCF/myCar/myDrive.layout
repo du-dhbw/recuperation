@@ -6,12 +6,6 @@ Component       myCar.myDrive size ( 38 , 13 ) {
 		pin mydt ( Bottom , 31 )
 		pin myg ( Bottom , 23 )
 	}
-	memberLayout momentum {
-		getPinPosition ( Top , 30 )
-	}
-	memberLayout dist {
-		getPinPosition ( Right , 8 )
-	}
 	memberLayout v {
 		getPinPosition ( Right , 3 )
 	}

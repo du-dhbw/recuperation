@@ -2,7 +2,7 @@ classType myCar.myDrive
 blockdiagramSpecification Main {
 	methodBody move {
 		outPin active {
-			connection_29, connection_81, connection_56, connection_91, connection_2, connection_48, connection_36, connection_100, connection_149, connection_159
+			connection_29, connection_81, connection_56, connection_91, connection_2, connection_48, connection_36
 		}
 	}
 	simpleIdentifier BrakeMomentuC at (181, 31) {
@@ -24,16 +24,13 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	addition at (451, 46) size (2, 5) {
+	addition at (451, 46) size (2, 4) {
 		inPin connection_10
-		inPin connection_4 {
-			bendpoints (20, 0), (20, -50)
+		inPin connection_161 {
+			bendpoints (90, 0), (90, -50)
 		}
-		inPin connection_42 {
-			bendpoints (170, 0), (170, -120)
-		}
-		inPin connection_151 {
-			bendpoints (70, 0), (70, -160)
+		inPin connection_167 {
+			bendpoints (60, 0), (60, -130)
 		}
 		inPin connection_145 {
 			bendpoints (30, 0)
@@ -42,43 +39,22 @@ blockdiagramSpecification Main {
 			connection_26
 		}
 	}
-	simpleIdentifier EngineMomentum at (191, 91) {
-		label at (10, 1)
-		inPin connection_7
-		inPin connection_102 {
-			bendpoints (80, 0), (80, -40)
-		}
-		outPin {
-			connection_101
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	methodArgumentIdentifier move.powerCtrl at (31, 95) {
+	methodArgumentIdentifier move.powerCtrl at (31, 205) {
 		label at (0, -1)
 		outPin {
-			connection_7
+			connection_169
 		}
 		sequenceCall at (-10, -14) {
 			inPin
 		}
 	}
 	multiplication at (601, 66) size (2, 3) {
-		inPin connection_26
+		inPin connection_26 {
+			bendpoints (110, 0)
+		}
 		inPin connection_28
 		outPin {
 			connection_31
-		}
-	}
-	simpleIdentifier momentum at (331, 105) {
-		label at (0, -1)
-		inPin connection_101
-		outPin {
-			connection_4
-		}
-		sequenceCall at (0, -14) {
-			inPin connection_100
 		}
 	}
 	simpleIdentifier v at (781, 85) {
@@ -100,13 +76,13 @@ blockdiagramSpecification Main {
 			connection_30
 		}
 	}
-	simpleIdentifier AirFriction at (191, 171) {
+	simpleIdentifier AirFriction at (181, 91) {
 		label at (0, 1)
 		inPin connection_103 {
-			bendpoints (80, 0), (80, 30)
+			bendpoints (90, 0), (90, -20)
 		}
 		outPin {
-			connection_42
+			connection_161
 		}
 		sequenceCall {
 			inPin
@@ -397,129 +373,50 @@ blockdiagramSpecification Main {
 			inPin connection_91
 		}
 	}
-	simpleIdentifier v at (31, 155) {
+	simpleIdentifier v at (21, 125) {
 		label at (0, -1)
 		inPin outPin {
-			connection_103, connection_142, connection_102
+			connection_166, connection_103
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-	methodArgumentIdentifier move.recupCtrl at (81, 275) {
+	methodArgumentIdentifier move.recupCtrl at (31, 245) {
 		label at (0, -1)
 		outPin {
-			connection_138
+			connection_168
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-	multiplication at (191, 236) {
-		inPin connection_136 {
-			bendpoints (30, 0)
-		}
-		inPin connection_137
-		outPin {
-			connection_150
-		}
-	}
-	simpleIdentifier RecuperationAccel at (101, 211) {
+	complexIdentifier Drivetrain_instance at (131, 191) size (14, 8) {
 		label at (0, 1)
-		inPin connection_142 {
-			bendpoints (0, 70)
-		}
-		outPin {
-			connection_136
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	division at (151, 276) {
-		inPin connection_138 {
-			bendpoints (31, 0)
-		}
-		inPin connection_139 {
-			bendpoints (20, 0)
-		}
-		outPin {
-			connection_137
-		}
-	}
-	literal Numeric "100.0" at (81, 323) size (49, 0) {
-		outPin {
-			connection_139
-		}
-	}
-	simpleIdentifier brakeMomentum at (321, 235) {
-		label at (0, -1)
-		inPin connection_150 {
-			bendpoints (90, 0)
-		}
-		outPin {
-			connection_151
-		}
-		sequenceCall {
-			inPin connection_149
-		}
-	}
-	complexIdentifier Battery_inst at (191, 571) size (14, 8) {
-		label at (0, 1)
-		methodCall myCar.Battery.getBattery {
-			argumentPin momentum at (left, 0) connection_156 {
-				bendpoints (20, 0)
+		methodCall myCar.Drivetrain.drive {
+			argumentPin powerCtrl at (left, 1) connection_169
+			argumentPin recupCtrl at (left, 5) connection_168
+			argumentPin v at (top, 2) connection_166 {
+				bendpoints (90, 0)
 			}
-			argumentPin ds at (left, 5) connection_153
+			argumentPin ds at (bottom, 6) connection_170 {
+				bendpoints (10, 0)
+			}
 			returnPin at (right, 0) {
-				connection_160
+				connection_167
 			}
-			sequenceCall {
+			sequenceCall at (0, 6) {
 				inPin
 			}
 		}
 	}
-	simpleIdentifier ds at (91, 625) {
+	simpleIdentifier ds at (141, 295) {
 		label at (0, -1)
 		inPin outPin {
-			connection_153
+			connection_170
 		}
 		sequenceCall {
 			inPin
-		}
-	}
-	simpleIdentifier momentum at (41, 555) {
-		label at (0, -1)
-		inPin outPin {
-			connection_154
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier brakeMomentum at (41, 585) {
-		label at (0, -1)
-		inPin outPin {
-			connection_155
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	addition at (121, 556) {
-		inPin connection_154
-		inPin connection_155 {
-			bendpoints (30, 0)
-		}
-		outPin {
-			connection_156
-		}
-	}
-	simpleIdentifier battery at (391, 575) {
-		label at (0, -1)
-		inPin connection_160
-		outPin sequenceCall {
-			inPin connection_159
 		}
 	}
 }

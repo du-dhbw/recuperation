@@ -47,7 +47,7 @@ blockdiagramSpecification Main {
 			bendpoints (30, 0)
 		}
 		outPin {
-			connection_10, connection_8
+			connection_12, connection_8
 		}
 		sequenceCall {
 			inPin connection_6
@@ -64,9 +64,11 @@ blockdiagramSpecification Main {
 			connection_7
 		}
 	}
-	return at (551, 165) {
+	return at (651, 165) {
 		label at (0, 0)
-		inPin connection_10
+		inPin connection_10 {
+			bendpoints (0, -10)
+		}
 		sequenceCall {
 			inPin connection_9
 		}
@@ -78,6 +80,24 @@ blockdiagramSpecification Main {
 		}
 		sequenceCall {
 			inPin
+		}
+	}
+	simpleIdentifier capacity at (521, 225) {
+		label at (0, -1)
+		outPin {
+			connection_13
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	division at (581, 166) {
+		inPin connection_12
+		inPin connection_13 {
+			bendpoints (0, -40)
+		}
+		outPin {
+			connection_10
 		}
 	}
 }

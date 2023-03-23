@@ -1,14 +1,8 @@
 package tests;
 import assertLib.Assert;
-import resources.curve_kmh;
-import resources.curve_m;
-import resources.curve_real_a;
-import resources.map_real_kmh;
-import resources.m;
 import resources.s;
 import resources.kmh;
 import resources.g;
-import resources.a;
 
 import myCar.Logging;
 import myCar.myDrive;

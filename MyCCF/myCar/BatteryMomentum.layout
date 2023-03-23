@@ -1,0 +1,18 @@
+Component   myCar.BatteryMomentum size ( 14 , 8 ) {
+	labelPosition ( 0 , 9 )
+	methodLayout bmsTrigger {
+		pin bmsTrigger ( Top , 0 )
+	}
+	memberLayout battery {
+		setPinPosition ( Left , 0 )
+	}
+	memberLayout momentum {
+		getPinPosition ( Right , 0 )
+	}
+	memberLayout accelMomentum {
+		setPinPosition ( Left , 1 )
+	}
+	memberLayout recupMomentum {
+		setPinPosition ( Left , 2 )
+	}
+}

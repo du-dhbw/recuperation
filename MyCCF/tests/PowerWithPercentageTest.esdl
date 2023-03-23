@@ -1,13 +1,8 @@
 package tests;
-import assertLib.Assert;
-import resources.m;
 import resources.s;
-import resources.a;
-import resources.Wh;
 import resources.g;
 import resources.kmh;
 
-import myCar.Battery;
 import myCar.Logging;
 import myCar.myDrive;
 

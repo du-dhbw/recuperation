@@ -1,0 +1,242 @@
+classType myCar.Drivetrain
+blockdiagramSpecification Main {
+	methodBody drive {
+		outPin active {
+			connection_68, connection_64, connection_63, connection_42, connection_41, connection_43, connection_62, connection_35, connection_50, connection_70, connection_15
+		}
+	}
+	multiplication at (201, 86) {
+		inPin connection_7 {
+			bendpoints (20, 0), (20, 30)
+		}
+		inPin connection_72
+		outPin {
+			connection_34
+		}
+	}
+	methodArgumentIdentifier drive.recupCtrl at (91, 105) {
+		label at (-60, -1)
+		outPin {
+			connection_72
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier RecuperationAccel at (91, 41) {
+		label at (-70, 1)
+		inPin connection_8
+		outPin {
+			connection_7
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier drive.v at (51, 55) {
+		label at (-50, -1)
+		outPin {
+			connection_8
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier EngineMomentum at (181, 331) {
+		label at (10, 1)
+		inPin connection_73 {
+			bendpoints (0, 130)
+		}
+		inPin connection_10 {
+			bendpoints (110, 0)
+		}
+		outPin {
+			connection_32
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier drive.powerCtrl at (-89, 215) {
+		label at (-30, -1)
+		outPin {
+			connection_71
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier drive.v at (31, 375) {
+		label at (0, -1)
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	return at (571, 185) {
+		label at (0, 0)
+		inPin connection_16 {
+			bendpoints (20, 0), (20, -10)
+		}
+		sequenceCall {
+			inPin connection_15
+		}
+	}
+	complexIdentifier Battery_inst at (171, -79) size (14, 8) {
+		label at (0, 1)
+		methodCall myCar.Battery.getBattery {
+			argumentPin momentum at (left, 0) connection_24
+			argumentPin ds at (left, 5) connection_25
+			returnPin at (right, 0) {
+				connection_44
+			}
+			sequenceCall at (0, 6) {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier momentum at (451, 195) {
+		label at (0, -1)
+		inPin connection_36 {
+			bendpoints (30, 0)
+		}
+		outPin {
+			connection_16
+		}
+		sequenceCall {
+			inPin connection_35
+		}
+	}
+	simpleIdentifier momentum at (71, -75) {
+		label at (0, -1)
+		inPin outPin {
+			connection_24
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier drive.ds at (51, -25) {
+		label at (0, -1)
+		outPin {
+			connection_25
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier BM_inst at (271, 181) size (14, 8) {
+		label at (0, 1)
+		elementCall (myCar.BatteryMomentum.battery) {
+			argumentPin at (top, 10) connection_44 {
+				bendpoints (60, 0)
+			}
+			sequenceCall {
+				inPin connection_43
+			}
+		}
+		elementCall (myCar.BatteryMomentum.momentum) {
+			returnPin at (right, 4) {
+				connection_36
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		elementCall (myCar.BatteryMomentum.accelMomentum) {
+			argumentPin at (left, 6) connection_32 {
+				bendpoints (20, 0)
+			}
+			sequenceCall at (-90, 16) {
+				inPin connection_41
+			}
+		}
+		elementCall (myCar.BatteryMomentum.recupMomentum) {
+			argumentPin at (left, 2) connection_34 {
+				bendpoints (0, 110)
+			}
+			sequenceCall at (-100, -24) {
+				inPin connection_42
+			}
+		}
+		elementCall (myCar.BatteryMomentum.empty) {
+			returnPin at (right, 6) {
+				connection_51
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+		methodCall myCar.BatteryMomentum.bmsTrigger {
+			methodVoidPin at (top, 0) sequenceCall at (-14, -36) {
+				inPin connection_62
+			}
+		}
+	}
+	simpleIdentifier batteryEmpty at (491, 245) {
+		label at (0, -1)
+		inPin connection_51
+		outPin sequenceCall {
+			inPin connection_50
+		}
+	}
+	simpleIdentifier batteryEmpty at (-69, 285) {
+		label at (0, -1)
+		inPin outPin {
+			connection_65
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier CM_inst at (21, 201) size (14, 10) {
+		label at (0, 1)
+		elementCall (myCar.CrawlingManager.batteryEmpty) {
+			argumentPin at (left, 8) connection_65
+			sequenceCall at (-70, 26) {
+				inPin connection_64
+			}
+		}
+		elementCall (myCar.CrawlingManager.odometer) {
+			argumentPin at (left, 6) sequenceCall {
+				inPin
+			}
+		}
+		elementCall (myCar.CrawlingManager.v) {
+			argumentPin at (left, 3) connection_69
+			sequenceCall at (-140, 16) {
+				inPin connection_68
+			}
+		}
+		elementCall (myCar.CrawlingManager.power) {
+			returnPin at (right, 0) {
+				connection_73
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		elementCall (myCar.CrawlingManager.driverPower) {
+			argumentPin at (left, 1) connection_71
+			sequenceCall at (-170, -24) {
+				inPin connection_70
+			}
+		}
+		methodCall myCar.CrawlingManager.crawlingManagerStatemachineTrigger {
+			methodVoidPin at (top, 0) sequenceCall at (-44, -10) {
+				inPin connection_63
+			}
+		}
+	}
+	methodArgumentIdentifier drive.v at (-79, 235) {
+		label at (0, -1)
+		outPin {
+			connection_69
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

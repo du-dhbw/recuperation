@@ -8,11 +8,12 @@ class Battery
 using BatteryRepresentation {
 	Wh battery = 1000.0[Wh];
 	characteristic kg weight = 1500.0[kg];
+	const Wh capacity = 1000.0[Wh];
 
-	@generated("blockdiagram", "d03035d6")
-	public Wh getBattery(a in momentum, m in ds) {
+	@generated("blockdiagram", "5787d467")
+	public real getBattery(a in momentum, m in ds) {
 		battery = (battery - ((weight * momentum) * ds)); // Main/getBattery 1
-		return battery; // Main/getBattery 2
+		return(battery / capacity); // Main/getBattery 2
 	}
 	representation BatteryRepresentation {
 		represent battery using {

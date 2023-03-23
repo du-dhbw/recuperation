@@ -4,8 +4,6 @@ import resources.m;
 import resources.a;
 
 import myCar.Battery;
-import myCar.Logging;
-
 static class BatteryUnitTest {
 	Battery tester;
 	Logging logger; 

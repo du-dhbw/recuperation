@@ -4,7 +4,6 @@ import resources.s;
 import resources.kmh;
 import resources.g;
 
-import myCar.Logging;
 import myCar.myDrive;
 
 static class myDriveUnitTest {

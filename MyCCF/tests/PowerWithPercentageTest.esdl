@@ -3,7 +3,6 @@ import resources.s;
 import resources.g;
 import resources.kmh;
 
-import myCar.Logging;
 import myCar.myDrive;
 
 static class PowerWithPercentageTest {

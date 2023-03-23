@@ -1,4 +1,4 @@
-package myCar;
+package tests;
 
 stateless
 class Logging {

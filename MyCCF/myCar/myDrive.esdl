@@ -1,7 +1,6 @@
 package myCar;
 import resources.curve_kmh;
 import resources.curve_real_a;
-import resources.m;
 import resources.s;
 import resources.kmh;
 import resources.g;
@@ -13,7 +12,6 @@ class myDrive {
 	characteristic curve_kmh AirFriction[6] = {{0.0[kmh], 30.0[kmh], 60.0[kmh], 90.0[kmh], 120.0[kmh], 150.0[kmh]}, {0.0[a], -0.1[a], -0.2[a], -0.4[a], -0.8[a], -1.6[a]}};
 	@get
 	kmh v = 0.0[kmh];
-	a brakeMomentum;
 	Drivetrain Drivetrain_instance;
 	Environment Environment_instance;
 	Odometer odo_inst;

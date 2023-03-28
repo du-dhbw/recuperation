@@ -34,18 +34,13 @@ static class DistanceTest {
 
 	@Test
 	public void testMaxDistanceWithSilly() {
-		logger.log(17800000.0, 17800000.0);
-		
 		tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);
 		tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);
 		
 		while (tester.v < 70.0 [kmh]) {
 			tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);	
-			//logger.log(time/1.0[s],tester.v/1.0[kmh]);
-			time = time + move_mydt;
 		}
 		
-		logger.log(17800001.1, 17800001.1);
 		Assert.assertNear(tester.v/1.0[kmh],70.0,1.0);
 		
 		while (!tester.Drivetrain_instance.batteryEmpty) {
@@ -65,19 +60,14 @@ static class DistanceTest {
 	}
 	
 	@Test
-	public void testMaxDistanceWithSillyWithoutRecup() {		
-		logger.log(17800100.0, 17800000.0);
-		
+	public void testMaxDistanceWithSillyWithoutRecup() {
 		tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);
 		tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);
 		
 		while (tester.v < 70.0 [kmh]) {
 			tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);	
-			//logger.log(time/1.0[s],tester.v/1.0[kmh]);
-			time = time + move_mydt;
 		}
 		
-		logger.log(17800101.1, 17800001.1);
 		Assert.assertNear(tester.v/1.0[kmh],70.0,1.0);
 		
 		while (!tester.Drivetrain_instance.batteryEmpty) {
@@ -99,19 +89,14 @@ static class DistanceTest {
 	
 	@Test
 	public void testDistancePIRegler() {
-		logger.log(17800100.0, 17800000.0);
-		
 		tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);
 		tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);
 		
 		while (tester.v < 70.0 [kmh]) {
 			tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);	
-			//logger.log(time/1.0[s],tester.v/1.0[kmh]);
-			time = time + move_mydt;
 		}
 		
-		logger.log(17800201.1, 17800001.1);
-		Assert.assertNear(tester.v/1.0[kmh],70.0,1.0);
+		Assert.assertNear(tester.v/1.0[kmh], 70.0, 1.0);
 		
 		while (!tester.Drivetrain_instance.batteryEmpty) {
 			real val = piRegler(tester.v, 70.0[kmh]);
@@ -132,18 +117,13 @@ static class DistanceTest {
 	
 	@Test
 	public void testDistancePIDRegler() {
-		logger.log(17800100.0, 17800000.0);
-		
 		tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);
 		tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);
 		
 		while (tester.v < 70.0 [kmh]) {
 			tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);	
-			//logger.log(time/1.0[s],tester.v/1.0[kmh]);
-			time = time + move_mydt;
 		}
 		
-		logger.log(17800201.1, 17800001.1);
 		Assert.assertNear(tester.v/1.0[kmh],70.0,1.0);
 		
 		while (!tester.Drivetrain_instance.batteryEmpty) {
@@ -160,7 +140,7 @@ static class DistanceTest {
 			
 		}
 		
-		logger.log(17800202.2, tester.odo_inst.odometer / 1.0 [km]);
+		logger.log(17800302.2, tester.odo_inst.odometer / 1.0 [km]);
 	}
 	
 	real sillyRegler(kmh currentSpeed, kmh setSpeed) {

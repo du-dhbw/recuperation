@@ -1,28 +1,44 @@
 package myCar;
 import resources.DriverMessages;
 import resources.CarMessages;
+import resources.kmh;
 import SystemLib.Miscellaneous.EdgeRising;
+import SystemLib.Transferfunction.Control.PID;
 import SystemLib.Comparators.GreaterZero;
 import SystemLib.Nonlinears.Limiter;
+import SystemLib.Transferfunction.Control.PI;
 
 static class CCF
-reads DriverMessages.brake, DriverMessages.power, CarMessages.v, DriverMessages.on, DriverMessages.increment, DriverMessages.decrement, DriverMessages.recuperation
-writes CarMessages.power, DriverMessages.display, CarMessages.recuperation, CarMessages.brake {
+reads DriverMessages.brake, DriverMessages.power, CarMessages.v, DriverMessages.on, DriverMessages.increment, DriverMessages.decrement
+writes CarMessages.brake, CarMessages.power, DriverMessages.display, CarMessages.recuperation {
+	kmh vsoll;
 	TargetVelocity TVI;
 	EdgeRising OnRising;
+	PID PID_instance;
+	characteristic real K = -1.9;
+	characteristic real TV = 0.01;
+	characteristic real TN = 0.10;
 	EdgeRising IncRising;
 	EdgeRising DecRising;
 	GreaterZero GZ;
 	SplitSignal SplitSignal_instance;
 	CCFState CCFS;
 	Limiter Limiter_instance;
+	characteristic real mn = -100.0;
+	characteristic real mx = 100.0;
+	characteristic kmh vs = 70.0[kmh];
 	real ctl;
 	characteristic real brake = -30.0;
 	characteristic real power = 50.0;
-	CCFState CCFState_instance;
+	characteristic boolean withRecup = true;
+	real br;
+	PI PI_instance;
+	real v;
+	PID PID_instance_2;
+	characteristic boolean PIDactive = true;
 
 	@thread
-	@generated("blockdiagram", "c885e86b")
+	@generated("blockdiagram", "50430e3e")
 	public void calc() {
 		OnRising.compute(DriverMessages.on); // Main/calc 1
 		if (OnRising.value()) {
@@ -36,18 +52,18 @@ writes CarMessages.power, DriverMessages.display, CarMessages.recuperation, CarM
 		if (DecRising.value()) {
 			TVI.dec(); // Main/calc 6/if-then 1
 		} // Main/calc 6
-		if (CarMessages.v > TVI.velocity()) {
-			ctl = brake; // Main/calc 7/if-then 1
-		} else {
-			ctl = power; // Main/calc 7/if-else 1
-		} // Main/calc 7
-		CCFState_instance.ctrl = ctl; // Main/calc 8
-		CCFState_instance.pow = DriverMessages.power; // Main/calc 9
-		CCFState_instance.bra = DriverMessages.brake; // Main/calc 10
-		CCFState_instance.act = OnRising.value(); // Main/calc 11
-		CCFState_instance.cCFStateStatemachineTrigger(); // Main/calc 12
-		CarMessages.power = CCFState_instance.pw; // Main/calc 13
-		DriverMessages.display = CCFState_instance.on; // Main/calc 14
-		CarMessages.recuperation = CCFState_instance.br; // Main/calc 15
+		CCFS.pow = DriverMessages.power; // Main/calc 7
+		CCFS.bra = DriverMessages.brake; // Main/calc 8
+		CCFS.act = OnRising.value(); // Main/calc 9
+		CCFS.cCFStateStatemachineTrigger(); // Main/calc 10
+		PI_instance.reset(0.0); // Main/calc 11
+		PI_instance.compute(((CarMessages.v - TVI.velocity()) / 1.0[kmh]), K, TN); // Main/calc 12
+		PID_instance_2.reset(0.0); // Main/calc 13
+		PID_instance_2.compute(((CarMessages.v - TVI.velocity()) / 1.0[kmh]), K, TV, TN); // Main/calc 14
+		ctl = (if PIDactive then PID_instance_2.value() else PI_instance.value()); // Main/calc 15
+		CCFS.ctrl = ctl; // Main/calc 16
+		CarMessages.power = CCFS.pw; // Main/calc 17
+		DriverMessages.display = CCFS.on; // Main/calc 18
+		CarMessages.recuperation = CCFS.br; // Main/calc 19
 	}
 }

@@ -9,7 +9,7 @@ static class myCar
 reads CarMessages.power, CarMessages.brake, CarMessages.recuperation
 writes CarMessages.v {
 	characteristic a g = 9.81[a];
-	myDrive myDrive_instance;
+	private myDrive myDrive_instance;
 	public characteristic kg weight = 1500.0[kg];
 
 	@thread

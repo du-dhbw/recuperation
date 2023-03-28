@@ -16,6 +16,11 @@ static class DistanceTest {
 	characteristic s move_mydt = 0.01[s];
 	characteristic g move_myg = 1.0[g];
 	s time = 0.0 [s];
+	
+	
+	/* silly variables */
+	characteristic real brake = -30.0;
+	characteristic real power = 50.0;
 
 	@Test
 	public void testMaxDistance() {
@@ -28,23 +33,36 @@ static class DistanceTest {
 		
 		while (tester.v < 70.0 [kmh]) {
 			tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);	
-			logger.log(time/1.0[s],tester.v/1.0[kmh]);
+			//logger.log(time/1.0[s],tester.v/1.0[kmh]);
 			time = time + move_mydt;
 		}
 		
-		logger.log(17800000.1, 17800000.1);
+		logger.log(17800001.1, 17800001.1);
 		Assert.assertNear(tester.v/1.0[kmh],70.0,1.0);
 		
-		// TODO: Tempomat einschalten
-		//Driver.turnOn();
+		while (!tester.Drivetrain_instance.batteryEmpty) {
+			real val = sillyRegler(tester.v, 70.0[kmh]);
+			if (val > 0.0) {
+				tester.move(val, 0.0, 0.0, move_mydt, move_myg);
+			}
+			
+			if (val < 0.0) {
+				tester.move(0.0, 0.0, val, move_mydt, move_myg);
+			}
+		}
 		
-		//while (tester.v > 0.0 [kmh]) {
-		//	CCF.calc();
-		//	tester.move(move_powerCtrl, move_brakeCtrl, move_recuperationCtrl, move_mydt, move_myg);	
-		//	logger.log(time/1.0[s],tester.v/1.0[kmh]);
-		//	time = time + move_mydt;
-		//}
+		logger.log(17800002.2, tester.odo_inst.odometer / 1.0 [km]);
+	}
+	
+	
+	public real sillyRegler(kmh currentSpeed, kmh setSpeed) {
+		if (setSpeed > currentSpeed) {
+			return power;
+		}
+		if (setSpeed < currentSpeed) {
+			return brake;
+		}
 		
-		//logger.log(17800000.2, 17800000.2);
+		return 0.0;
 	}
 }

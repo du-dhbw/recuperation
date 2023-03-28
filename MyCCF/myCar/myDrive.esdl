@@ -12,10 +12,12 @@ class myDrive {
 	characteristic curve_kmh AirFriction[6] = {{0.0[kmh], 30.0[kmh], 60.0[kmh], 90.0[kmh], 120.0[kmh], 150.0[kmh]}, {0.0[a], -0.1[a], -0.2[a], -0.4[a], -0.8[a], -1.6[a]}};
 	@get
 	kmh v = 0.0[kmh];
+	@get
 	Drivetrain Drivetrain_instance;
 	Environment Environment_instance;
+	@get
 	Odometer odo_inst;
-	km kmstand;
+	km kmstand = 0.0 [km];
 
 	@generated("blockdiagram", "63800c94")
 	public void move(real in powerCtrl, real in brakeCtrl, real in recupCtrl, s in mydt, g in myg) {

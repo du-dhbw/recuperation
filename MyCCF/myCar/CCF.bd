@@ -2,7 +2,7 @@ classType myCar.CCF
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_14, connection_16, connection_23, connection_25, connection_27, connection_29, connection_64, connection_70, connection_49, connection_51, connection_53, connection_44, connection_45, connection_81, connection_59
+			connection_14, connection_16, connection_23, connection_25, connection_27, connection_29, connection_64, connection_70, connection_49, connection_51, connection_53, connection_44, connection_45, connection_84, connection_59
 		}
 	}
 	simpleIdentifier resources.DriverMessages.on at (21, 165) {
@@ -308,11 +308,11 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.brake at (831, 365) {
+	simpleIdentifier resources.CarMessages.recuperation at (831, 365) {
 		label at (0, -1)
 		inPin connection_82
-		sequenceCall at (-10, -14) {
-			inPin connection_81
+		sequenceCall {
+			inPin connection_84
 		}
 	}
 }

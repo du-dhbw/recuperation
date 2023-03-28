@@ -11,6 +11,7 @@ class Drivetrain {
 	Battery Battery_inst;
 	a momentum = 0.0[a];
 	BatteryMomentum BM_inst;
+	@get
 	boolean batteryEmpty = false;
 	CrawlingManager CM_inst;
 

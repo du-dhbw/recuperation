@@ -94,7 +94,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.recuperation at (531, 55) {
+	simpleIdentifier resources.DriverMessages.recuperation at (541, 55) {
 		label at (0, -1)
 		inPin connection_12
 		sequenceCall {

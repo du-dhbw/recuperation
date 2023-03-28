@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 3347065013
+		         /* programm id */ 3347068501
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -95,7 +95,7 @@
 			/* upper limit        */ 1000.0
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 1 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 1 1000 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -109,7 +109,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 1 1000 1
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 1 1000 1
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -123,7 +123,7 @@
 			/* upper limit        */ 2
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 0 1000 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 0 1000 6
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -137,7 +137,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 0 1000 1
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 0 1000 1
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -151,7 +151,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 0 1000 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 0 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -165,7 +165,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 0 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 0 1000 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -179,7 +179,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 0 1000 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 0 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -194,7 +194,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 0 1000 2
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 0 1000 2
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -209,7 +209,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 0 1000 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 0 1000 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -223,7 +223,7 @@
 			/* upper limit        */ 3
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 2 1000 8
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 2 1000 8
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -238,7 +238,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 2 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 2 1000 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -252,7 +252,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 2 1000 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 2 1000 6
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -266,7 +266,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 2 1000 9
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 2 1000 9
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -280,7 +280,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 2 1000 7
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 2 1000 7
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -294,7 +294,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 2 1000 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 2 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -308,7 +308,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 2 1000 2
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 2 1000 2
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -322,7 +322,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 2 1000 4
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 2 1000 4
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -336,7 +336,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 2 1000 3
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 2 1000 3
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -350,7 +350,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 4 1000 0 1000 0 1000 2 1000 1
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 2 1000 1
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -372,7 +372,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 4
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 0 1000 4
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -402,7 +402,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 3
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 0 1000 3
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -416,7 +416,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 0 1000 6
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -431,7 +431,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 0 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -445,7 +445,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 1 1000 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 1 1000 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -459,7 +459,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 1 1000 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 1 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -481,7 +481,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 1 1000 0
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 1 1000 0
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -495,7 +495,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 1 1000 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 1 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -509,7 +509,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 1 1000 2
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 1 1000 2
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -523,7 +523,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 1 1000 1
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 1 1000 1
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -537,7 +537,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 2 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 2 1000 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -559,7 +559,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 4
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 4
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -581,7 +581,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 3
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 3
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -595,7 +595,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 6
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -609,7 +609,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -623,7 +623,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 1
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 1
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -637,7 +637,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 0
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1001 0
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -764,7 +764,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 3 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 4 1000 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -779,49 +779,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 3 1000 1
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.CCF.PID_instance.inOLD
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT64_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -1.7976931348623157E+308
-			/* upper limit        */ 1.7976931348623157E+308
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 4 1000 0
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.CCF.PID_instance.memory1
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT64_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -1.7976931348623157E+308
-			/* upper limit        */ 1.7976931348623157E+308
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 4 1000 1
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.CCF.PID_instance.memory2
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT64_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -1.7976931348623157E+308
-			/* upper limit        */ 1.7976931348623157E+308
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 4 1000 2
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -836,7 +794,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 2 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 3 1000 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -851,7 +809,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 2 1000 1
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 3 1000 1
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -866,7 +824,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 2 1000 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -881,7 +839,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 1
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 2 1000 1
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -1027,7 +985,21 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT myCar.CCF.vsoll
+		/begin MEASUREMENT myCar.CCF.CCFState_instance.sm
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_myCar_CCFStateStatemachineStates
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 7
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.CCF.CCFState_instance.pow
 			/* long identifier    */ ""
 			/* datatype           */ FLOAT32_IEEE
 			/* conversion         */ esdl_ident
@@ -1037,93 +1009,95 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 17
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin CHARACTERISTIC myCar.CCF.K
+		/begin MEASUREMENT myCar.CCF.CCFState_instance.bra
 			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
+			/* datatype           */ FLOAT32_IEEE
 			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 7
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 2
 			/end IF_DATA
-		/end CHARACTERISTIC
+		/end MEASUREMENT
 
-		/begin CHARACTERISTIC myCar.CCF.TV
+		/begin MEASUREMENT myCar.CCF.CCFState_instance.pw
 			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
+			/* datatype           */ FLOAT32_IEEE
 			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 9
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 6
 			/end IF_DATA
-		/end CHARACTERISTIC
+		/end MEASUREMENT
 
-		/begin CHARACTERISTIC myCar.CCF.TN
+		/begin MEASUREMENT myCar.CCF.CCFState_instance.br
 			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
+			/* datatype           */ FLOAT32_IEEE
 			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 8
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 1
 			/end IF_DATA
-		/end CHARACTERISTIC
+		/end MEASUREMENT
 
-		/begin CHARACTERISTIC myCar.CCF.mn
+		/begin MEASUREMENT myCar.CCF.CCFState_instance.on
 			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
+			/* datatype           */ UBYTE
 			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 13
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 4
 			/end IF_DATA
-		/end CHARACTERISTIC
+		/end MEASUREMENT
 
-		/begin CHARACTERISTIC myCar.CCF.mx
+		/begin MEASUREMENT myCar.CCF.CCFState_instance.act
 			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
+			/* datatype           */ UBYTE
 			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 14
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 0
 			/end IF_DATA
-		/end CHARACTERISTIC
+		/end MEASUREMENT
 
-		/begin CHARACTERISTIC myCar.CCF.vs
+		/begin MEASUREMENT myCar.CCF.CCFState_instance.ctrl
 			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
+			/* datatype           */ FLOAT32_IEEE
 			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 16
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 3
 			/end IF_DATA
-		/end CHARACTERISTIC
+		/end MEASUREMENT
 
 		/begin MEASUREMENT myCar.CCF.ctl
 			/* long identifier    */ ""
@@ -1135,7 +1109,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 12
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 8
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -1149,7 +1123,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 11
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 7
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -1163,38 +1137,9 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 15
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 9
 			/end IF_DATA
 		/end CHARACTERISTIC
-
-		/begin CHARACTERISTIC myCar.CCF.withRecup
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_U8
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ 0
-			/* upper limit        */ 1
-			BIT_MASK 0x1
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 18
-			/end IF_DATA
-		/end CHARACTERISTIC
-
-		/begin MEASUREMENT myCar.CCF.br
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 10
-			/end IF_DATA
-		/end MEASUREMENT
 
 		/begin MEASUREMENT resources.DriverMessages.brake
 			/* long identifier    */ ""
@@ -1206,7 +1151,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1001 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -1220,7 +1165,21 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1001 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 5
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT resources.DriverMessages.recuperation
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 6
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -1235,7 +1194,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1001 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -1250,7 +1209,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1001 2
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 2
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -1265,7 +1224,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1001 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -1280,7 +1239,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1001 1
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 1
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -1294,7 +1253,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 4
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 4
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -1308,7 +1267,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 0
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 0
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -1323,7 +1282,7 @@
 			/* upper limit        */ 1
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 3
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 3
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -1338,7 +1297,7 @@
 			/* upper limit        */ 1
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 2
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 2
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -1353,7 +1312,7 @@
 			/* upper limit        */ 1
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 1
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 1
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -1367,9 +1326,23 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 5
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 5
 			/end IF_DATA
 		/end CHARACTERISTIC
+
+		/begin MEASUREMENT SystemLib.Miscellaneous.DeltaTimeService.deltaT
+			/* long identifier    */ "This value contains the delta time between two subsequent task activations in seconds. There are several representations possible."
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0.0
+			/* upper limit        */ 100.0
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1001 0
+			/end IF_DATA
+		/end MEASUREMENT
 
 		/begin COMPU_METHOD esdl_f0_01_kmh_km2fh
 			/* long identifier    */ ""
@@ -1544,15 +1517,8 @@
 		/begin FUNCTION myCar.CCF
 			""
 			/begin DEF_CHARACTERISTIC
-				myCar.CCF.K
-				myCar.CCF.TV
-				myCar.CCF.TN
-				myCar.CCF.mn
-				myCar.CCF.mx
-				myCar.CCF.vs
 				myCar.CCF.brake
 				myCar.CCF.power
-				myCar.CCF.withRecup
 			/end DEF_CHARACTERISTIC
 			/begin IN_MEASUREMENT
 				resources.CarMessages.v
@@ -1561,25 +1527,25 @@
 				resources.DriverMessages.increment
 				resources.DriverMessages.on
 				resources.DriverMessages.power
+				resources.DriverMessages.recuperation
 			/end IN_MEASUREMENT
 			/begin OUT_MEASUREMENT
 				resources.CarMessages.brake
 				resources.CarMessages.power
+				resources.CarMessages.recuperation
 				resources.DriverMessages.display
 			/end OUT_MEASUREMENT
 			/begin LOC_MEASUREMENT
-				myCar.CCF.br
 				myCar.CCF.ctl
-				myCar.CCF.vsoll
 			/end LOC_MEASUREMENT
 			/begin SUB_FUNCTION
 				myCar.CCF.CCFS
+				myCar.CCF.CCFState_instance
 				myCar.CCF.DecRising
 				myCar.CCF.GZ
 				myCar.CCF.IncRising
 				myCar.CCF.Limiter_instance
 				myCar.CCF.OnRising
-				myCar.CCF.PID_instance
 				myCar.CCF.SplitSignal_instance
 				myCar.CCF.TVI
 			/end SUB_FUNCTION
@@ -1600,14 +1566,6 @@
 			/begin LOC_MEASUREMENT
 				myCar.CCF.OnRising.buffer
 				myCar.CCF.OnRising.oldSignal
-			/end LOC_MEASUREMENT
-		/end FUNCTION
-		/begin FUNCTION myCar.CCF.PID_instance
-			"PID is a time discrete proportional integrator with differential part with time constants TV and TN and gain constant K."
-			/begin LOC_MEASUREMENT
-				myCar.CCF.PID_instance.inOLD
-				myCar.CCF.PID_instance.memory1
-				myCar.CCF.PID_instance.memory2
 			/end LOC_MEASUREMENT
 		/end FUNCTION
 		/begin FUNCTION myCar.CCF.IncRising
@@ -1656,6 +1614,19 @@
 		/begin FUNCTION myCar.CCF.Limiter_instance
 			"Limiter returns the input x limited by mn and mx."
 		/end FUNCTION
+		/begin FUNCTION myCar.CCF.CCFState_instance
+			""
+			/begin LOC_MEASUREMENT
+				myCar.CCF.CCFState_instance.act
+				myCar.CCF.CCFState_instance.br
+				myCar.CCF.CCFState_instance.bra
+				myCar.CCF.CCFState_instance.ctrl
+				myCar.CCF.CCFState_instance.on
+				myCar.CCF.CCFState_instance.pow
+				myCar.CCF.CCFState_instance.pw
+				myCar.CCF.CCFState_instance.sm
+			/end LOC_MEASUREMENT
+		/end FUNCTION
 		/begin FUNCTION myCar.Driver
 			""
 			/begin DEF_CHARACTERISTIC
@@ -1673,10 +1644,14 @@
 				resources.DriverMessages.increment
 				resources.DriverMessages.on
 				resources.DriverMessages.power
+				resources.DriverMessages.recuperation
 			/end OUT_MEASUREMENT
 		/end FUNCTION
 		/begin FUNCTION SystemLib.Miscellaneous.DeltaTimeService
 			"Provides the delta time variable"
+			/begin OUT_MEASUREMENT
+				SystemLib.Miscellaneous.DeltaTimeService.deltaT
+			/end OUT_MEASUREMENT
 		/end FUNCTION
 
 		/begin RECORD_LAYOUT STANDARD_CURVE_R32R32
@@ -1701,34 +1676,28 @@
 		/begin GROUP SystemLib.Miscellaneous.DeltaTimeService
 			"Provides the delta time variable"
 			ROOT
+			/begin REF_MEASUREMENT
+				SystemLib.Miscellaneous.DeltaTimeService.deltaT
+			/end REF_MEASUREMENT
 		/end GROUP
 		/begin GROUP myCar.CCF
 			""
 			ROOT
 			/begin REF_CHARACTERISTIC
-				myCar.CCF.K
-				myCar.CCF.TV
-				myCar.CCF.TN
-				myCar.CCF.mn
-				myCar.CCF.mx
-				myCar.CCF.vs
 				myCar.CCF.brake
 				myCar.CCF.power
-				myCar.CCF.withRecup
 			/end REF_CHARACTERISTIC
 			/begin REF_MEASUREMENT
-				myCar.CCF.br
 				myCar.CCF.ctl
-				myCar.CCF.vsoll
 			/end REF_MEASUREMENT
 			/begin SUB_GROUP
 				myCar.CCF.CCFS
+				myCar.CCF.CCFState_instance
 				myCar.CCF.DecRising
 				myCar.CCF.GZ
 				myCar.CCF.IncRising
 				myCar.CCF.Limiter_instance
 				myCar.CCF.OnRising
-				myCar.CCF.PID_instance
 				myCar.CCF.SplitSignal_instance
 				myCar.CCF.TVI
 			/end SUB_GROUP
@@ -1744,6 +1713,19 @@
 				myCar.CCF.CCFS.pow
 				myCar.CCF.CCFS.pw
 				myCar.CCF.CCFS.sm
+			/end REF_MEASUREMENT
+		/end GROUP
+		/begin GROUP myCar.CCF.CCFState_instance
+			""
+			/begin REF_MEASUREMENT
+				myCar.CCF.CCFState_instance.act
+				myCar.CCF.CCFState_instance.br
+				myCar.CCF.CCFState_instance.bra
+				myCar.CCF.CCFState_instance.ctrl
+				myCar.CCF.CCFState_instance.on
+				myCar.CCF.CCFState_instance.pow
+				myCar.CCF.CCFState_instance.pw
+				myCar.CCF.CCFState_instance.sm
 			/end REF_MEASUREMENT
 		/end GROUP
 		/begin GROUP myCar.CCF.DecRising
@@ -1771,14 +1753,6 @@
 			/begin REF_MEASUREMENT
 				myCar.CCF.OnRising.buffer
 				myCar.CCF.OnRising.oldSignal
-			/end REF_MEASUREMENT
-		/end GROUP
-		/begin GROUP myCar.CCF.PID_instance
-			"PID is a time discrete proportional integrator with differential part with time constants TV and TN and gain constant K."
-			/begin REF_MEASUREMENT
-				myCar.CCF.PID_instance.inOLD
-				myCar.CCF.PID_instance.memory1
-				myCar.CCF.PID_instance.memory2
 			/end REF_MEASUREMENT
 		/end GROUP
 		/begin GROUP myCar.CCF.SplitSignal_instance
@@ -1937,6 +1911,7 @@
 				resources.DriverMessages.increment
 				resources.DriverMessages.on
 				resources.DriverMessages.power
+				resources.DriverMessages.recuperation
 			/end REF_MEASUREMENT
 		/end GROUP
 	/end MODULE

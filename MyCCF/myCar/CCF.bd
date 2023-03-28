@@ -2,7 +2,7 @@ classType myCar.CCF
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_14, connection_16, connection_23, connection_25, connection_27, connection_29, connection_64, connection_70, connection_49, connection_51, connection_53, connection_44, connection_45, connection_84, connection_59
+			connection_14, connection_16, connection_23, connection_25, connection_27, connection_29, connection_64, connection_106, connection_103, connection_104, connection_105, connection_102, connection_45, connection_59, connection_107
 		}
 	}
 	simpleIdentifier resources.DriverMessages.on at (21, 165) {
@@ -14,16 +14,16 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.power at (831, 325) {
+	simpleIdentifier resources.CarMessages.power at (831, 345) {
 		label at (0, -1)
 		inPin connection_46 {
-			bendpoints (30, 0), (30, -20)
+			bendpoints (70, 0)
 		}
 		sequenceCall at (-10, -14) {
 			inPin connection_45
 		}
 	}
-	simpleIdentifier resources.DriverMessages.brake at (461, 375) {
+	simpleIdentifier resources.DriverMessages.brake at (451, 405) {
 		label at (0, -1)
 		outPin {
 			connection_52
@@ -190,70 +190,10 @@ blockdiagramSpecification Main {
 			inPin connection_29
 		}
 	}
-	complexIdentifier CCFS at (571, 331) size (20, 8) {
-		label at (40, -19)
-		methodCall myCar.CCFState.cCFStateStatemachineTrigger {
-			methodVoidPin at (top, 4) sequenceCall at (6, -20) {
-				inPin connection_44
-			}
-		}
-		elementCall (myCar.CCFState.pow) {
-			argumentPin at (left, 1) connection_50
-			sequenceCall at (-150, -4) {
-				inPin connection_49
-			}
-		}
-		elementCall (myCar.CCFState.bra) {
-			argumentPin at (left, 4) connection_52
-			sequenceCall at (-150, -4) {
-				inPin connection_51
-			}
-		}
-		elementCall (myCar.CCFState.pw) {
-			returnPin at (right, 1) {
-				connection_46
-			}
-			sequenceCall {
-				inPin
-			}
-		}
-		elementCall (myCar.CCFState.br) {
-			returnPin at (right, 3) {
-				connection_82
-			}
-			sequenceCall {
-				inPin
-			}
-		}
-		elementCall (myCar.CCFState.on) {
-			returnPin at (right, 5) {
-				connection_60
-			}
-			sequenceCall {
-				inPin
-			}
-		}
-		elementCall (myCar.CCFState.act) {
-			argumentPin at (left, 6) connection_54 {
-				bendpoints (40, 0), (40, 30), (-130, 30), (-130, 230)
-			}
-			sequenceCall at (-30, 16) {
-				inPin connection_53
-			}
-		}
-		elementCall (myCar.CCFState.ctrl) {
-			argumentPin at (top, 1) connection_71 {
-				bendpoints (30, 0), (30, 130), (-230, 130)
-			}
-			sequenceCall at (-44, -20) {
-				inPin connection_70
-			}
-		}
-	}
-	simpleIdentifier resources.DriverMessages.display at (831, 405) {
+	simpleIdentifier resources.DriverMessages.display at (831, 435) {
 		label at (0, -1)
 		inPin connection_60 {
-			bendpoints (20, 0), (20, 20)
+			bendpoints (90, 0)
 		}
 		sequenceCall at (-10, -14) {
 			inPin connection_59
@@ -308,11 +248,77 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.recuperation at (831, 365) {
+	complexIdentifier CCFState_instance at (611, 361) size (14, 8) {
+		label at (0, 1)
+		methodCall myCar.CCFState.cCFStateStatemachineTrigger {
+			methodVoidPin at (top, 0) sequenceCall at (-14, -36) {
+				inPin connection_102
+			}
+		}
+		elementCall (myCar.CCFState.pow) {
+			argumentPin at (left, 0) connection_50 {
+				bendpoints (100, 0)
+			}
+			sequenceCall at (120, -114) {
+				inPin connection_103
+			}
+		}
+		elementCall (myCar.CCFState.bra) {
+			argumentPin at (left, 2) connection_52 {
+				bendpoints (0, -20)
+			}
+			sequenceCall at (50, -104) {
+				inPin connection_104
+			}
+		}
+		elementCall (myCar.CCFState.pw) {
+			returnPin at (right, 0) {
+				connection_46
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		elementCall (myCar.CCFState.br) {
+			returnPin at (right, 1) {
+				connection_108
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		elementCall (myCar.CCFState.on) {
+			returnPin at (bottom, 12) {
+				connection_60
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		elementCall (myCar.CCFState.act) {
+			argumentPin at (left, 5) connection_54 {
+				bendpoints (460, 0)
+			}
+			sequenceCall at (-70, -74) {
+				inPin connection_105
+			}
+		}
+		elementCall (myCar.CCFState.ctrl) {
+			argumentPin at (left, 3) connection_71 {
+				bendpoints (-220, 0)
+			}
+			sequenceCall at (-90, -4) {
+				inPin connection_106
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.recuperation at (831, 395) {
 		label at (0, -1)
-		inPin connection_82
+		inPin connection_108 {
+			bendpoints (70, 0)
+		}
 		sequenceCall {
-			inPin connection_84
+			inPin connection_107
 		}
 	}
 }

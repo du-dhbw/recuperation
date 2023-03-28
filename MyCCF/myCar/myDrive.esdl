@@ -6,6 +6,7 @@ import resources.kmh;
 import resources.g;
 import resources.a;
 import resources.km;
+import resources.m;
 
 class myDrive {
 	characteristic curve_real_a BrakeMomentuC[6] = {{0.0, 1.0, 40.0, 60.0, 80.0, 100.0}, {0.0[a], 0.0[a], -1.0[a], -2.0[a], -3.0[a], -4.0[a]}};
@@ -17,14 +18,14 @@ class myDrive {
 	Environment Environment_instance;
 	@get
 	Odometer odo_inst;
-	km kmstand = 0.0 [km];
+	km mileage = 0.0[km];
 
-	@generated("blockdiagram", "63800c94")
+	@generated("blockdiagram", "9c3031f7")
 	public void move(real in powerCtrl, real in brakeCtrl, real in recupCtrl, s in mydt, g in myg) {
 		v = (((BrakeMomentuC.getAt(brakeCtrl) + AirFriction.getAt(v) + Drivetrain_instance.drive(powerCtrl, recupCtrl, v, Environment_instance.ds) + Environment_instance.move(myg, mydt, v)) * mydt) + v); // Main/move 1
 		if (v < 0.0[kmh]) {
 			v = 0.0[kmh]; // Main/move 2/if-then 1
 		} // Main/move 2
-		kmstand = odo_inst.calc(Environment_instance.ds); // Main/move 3
+		mileage = odo_inst.calc(Environment_instance.ds); // Main/move 3
 	}
 }

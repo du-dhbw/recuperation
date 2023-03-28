@@ -10,7 +10,7 @@ import SystemLib.Transferfunction.Control.PI;
 
 static class CCF
 reads DriverMessages.brake, DriverMessages.power, CarMessages.v, DriverMessages.on, DriverMessages.increment, DriverMessages.decrement
-writes CarMessages.brake, CarMessages.power, DriverMessages.display, CarMessages.recuperation {
+writes CarMessages.power, DriverMessages.display, CarMessages.recuperation {
 	kmh vsoll;
 	TargetVelocity TVI;
 	EdgeRising OnRising;
@@ -38,7 +38,7 @@ writes CarMessages.brake, CarMessages.power, DriverMessages.display, CarMessages
 	characteristic boolean PIDactive = true;
 
 	@thread
-	@generated("blockdiagram", "50430e3e")
+	@generated("blockdiagram", "39503906")
 	public void calc() {
 		OnRising.compute(DriverMessages.on); // Main/calc 1
 		if (OnRising.value()) {

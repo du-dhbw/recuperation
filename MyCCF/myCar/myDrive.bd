@@ -240,7 +240,7 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	simpleIdentifier kmstand at (421, 295) {
+	simpleIdentifier mileage at (421, 295) {
 		label at (0, -1)
 		inPin connection_178
 		outPin sequenceCall {

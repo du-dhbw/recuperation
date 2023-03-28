@@ -68,7 +68,7 @@ blockdiagramSpecification Main {
 		}
 		methodCall myCar.TargetVelocity.velocity {
 			returnPin at (right, 3) {
-				connection_86
+				connection_125
 			}
 			sequenceCall {
 				inPin
@@ -298,20 +298,18 @@ blockdiagramSpecification Main {
 		}
 	}
 	subtraction at (611, 16) {
-		inPin connection_106 {
-			bendpoints (0, 10)
-		}
-		inPin connection_86 {
-			bendpoints (10, 0), (10, -160), (130, -160)
+		inPin connection_124
+		inPin connection_125 {
+			bendpoints (0, -170)
 		}
 		outPin {
 			connection_93
 		}
 	}
-	simpleIdentifier resources.CarMessages.v at (541, 5) {
+	simpleIdentifier resources.CarMessages.v at (511, 15) {
 		label at (0, -1)
 		outPin {
-			connection_106
+			connection_124
 		}
 		sequenceCall {
 			inPin

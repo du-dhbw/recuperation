@@ -16,7 +16,7 @@ class CrawlingManager {
 	private real driverPower = 0.0;
 	m crawlingStartOdometer = 0.0[m];
 	characteristic kmh crawlingTargetSpeed = 10.0[kmh];
-	characteristic m crawlingTargetDistance = 500.0[m];
+	characteristic m crawlingTargetDistance = 150.0[m];
 	characteristic real crawlingPower = 5.5;
 
 	@generated("statemachine", "000000")

@@ -12,11 +12,13 @@ class BatteryMomentum {
 	private a recupMomentum = 0.0[a];
 	@get
 	boolean empty = false;
+	@get
+	boolean full = true;
 
 	@generated("statemachine", "000000")
 	public void bmsTrigger() triggers BatteryMomentumStatemachine;
 
-	@generated("statemachine", "5e7c1a5b")
+	@generated("statemachine", "fd916ffb")
 	statemachine BatteryMomentumStatemachine using BatteryMomentumStatemachineStates {
 		start Full;
 
@@ -24,7 +26,9 @@ class BatteryMomentum {
 			static {
 				momentum = accelMomentum;
 			}
-			transition battery < 1.0 to Operational;
+			transition battery < 1.0 to Operational {
+				full = false;
+			};
 		}
 
 		state Empty {
@@ -51,7 +55,9 @@ class BatteryMomentum {
 			transition battery == 0.0 to Empty {
 				empty = true;
 			};
-			transition battery == 1.0 to Full;
+			transition battery == 1.0 to Full {
+				full = true;
+			};
 		}
 	}
 }

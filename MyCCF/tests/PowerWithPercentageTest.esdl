@@ -10,7 +10,6 @@ static class PowerWithPercentageTest {
 	Logging logger; 
 	characteristic s move_mydt = 0.1[s];
 	characteristic g move_myg = 0.0[g];
-	s time = 0.0 [s];
 	
 	private void testXPercent(real percent) {
 		kmh saved = 0.0 [kmh];

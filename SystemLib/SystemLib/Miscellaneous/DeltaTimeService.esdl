@@ -11,8 +11,7 @@ static class DeltaTimeService {
 	 * This value contains the delta time between two subsequent task activations in seconds.
 	 * There are several representations possible.
 	 */
-	@dT
-	public TimeType deltaT = 0.0;
+	public TimeType deltaT = 0.01;
 
 	/**
 	 * return the delta time value in microseconds

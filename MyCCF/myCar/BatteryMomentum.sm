@@ -6,14 +6,14 @@
         <outgoingTransitions xmi:id="_CkZZ4Ml2Ee2WkM_l_FElFA" target="_CkVvgMl2Ee2WkM_l_FElFA"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_CkVvgMl2Ee2WkM_l_FElFA" specification="static {&#xD;&#xA;&#x9;momentum = accelMomentum;&#xD;&#xA;}" name="Full" incomingTransitions="_CkZZ4Ml2Ee2WkM_l_FElFA _LnTdcMl5Ee2jlJt0U1dmOg">
-        <outgoingTransitions xmi:id="_u2M7gMl2Ee2WkM_l_FElFA" specification="battery &lt; 1.0" target="_O9y_gMl2Ee2WkM_l_FElFA"/>
+        <outgoingTransitions xmi:id="_u2M7gMl2Ee2WkM_l_FElFA" specification="battery &lt; 1.0 {&#xD;&#xA;&#x9;full = false;&#xD;&#xA;}" target="_O9y_gMl2Ee2WkM_l_FElFA"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_OV5SAMl2Ee2WkM_l_FElFA" specification="static {&#xD;&#xA;&#x9;if (accelMomentum > 0.0[a]) {&#xD;&#xA;&#x9;&#x9;momentum = accelMomentum;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else {&#xD;&#xA;&#x9;&#x9;momentum = recupMomentum;&#xD;&#xA;&#x9;}&#xD;&#xA;}" name="Empty" incomingTransitions="_2vnu0Ml2Ee2WkM_l_FElFA">
         <outgoingTransitions xmi:id="_yMStkMl2Ee2WkM_l_FElFA" specification="battery > 0.0 {&#xD;&#xA;&#x9;empty = false;&#xD;&#xA;}" target="_O9y_gMl2Ee2WkM_l_FElFA"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_O9y_gMl2Ee2WkM_l_FElFA" specification="static {&#xD;&#xA;&#x9;if (accelMomentum > 0.0[a]) {&#xD;&#xA;&#x9;&#x9;momentum = accelMomentum;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else {&#xD;&#xA;&#x9;&#x9;momentum = recupMomentum;&#xD;&#xA;&#x9;}&#xD;&#xA;}" name="Operational" incomingTransitions="_u2M7gMl2Ee2WkM_l_FElFA _yMStkMl2Ee2WkM_l_FElFA">
         <outgoingTransitions xmi:id="_2vnu0Ml2Ee2WkM_l_FElFA" specification="battery == 0.0 {&#xD;&#xA;&#x9;empty = true;&#xD;&#xA;}" target="_OV5SAMl2Ee2WkM_l_FElFA"/>
-        <outgoingTransitions xmi:id="_LnTdcMl5Ee2jlJt0U1dmOg" specification="battery == 1.0" target="_CkVvgMl2Ee2WkM_l_FElFA"/>
+        <outgoingTransitions xmi:id="_LnTdcMl5Ee2jlJt0U1dmOg" specification="battery == 1.0 {&#xD;&#xA;&#x9;&#x9;full = true;&#xD;&#xA;}" target="_CkVvgMl2Ee2WkM_l_FElFA"/>
       </vertices>
     </regions>
   </sgraph:Statechart>

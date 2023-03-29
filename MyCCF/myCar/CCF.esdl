@@ -15,9 +15,9 @@ writes CarMessages.power, DriverMessages.display, CarMessages.recuperation {
 	TargetVelocity TVI;
 	EdgeRising OnRising;
 	PID PID_instance;
-	characteristic real K = -1.9;
+	sysconst real K = -45.9;
 	characteristic real TV = 0.01;
-	characteristic real TN = 0.10;
+	sysconst real TN = 10.0;
 	EdgeRising IncRising;
 	EdgeRising DecRising;
 	GreaterZero GZ;
@@ -35,10 +35,10 @@ writes CarMessages.power, DriverMessages.display, CarMessages.recuperation {
 	PI PI_instance;
 	real v;
 	PID PID_instance_2;
-	characteristic boolean PIDactive = true;
+	characteristic boolean PIDactive = false;
 
 	@thread
-	@generated("blockdiagram", "39503906")
+	@generated("blockdiagram", "0fc2316b")
 	public void calc() {
 		OnRising.compute(DriverMessages.on); // Main/calc 1
 		if (OnRising.value()) {
@@ -56,14 +56,12 @@ writes CarMessages.power, DriverMessages.display, CarMessages.recuperation {
 		CCFS.bra = DriverMessages.brake; // Main/calc 8
 		CCFS.act = OnRising.value(); // Main/calc 9
 		CCFS.cCFStateStatemachineTrigger(); // Main/calc 10
-		PI_instance.reset(0.0); // Main/calc 11
-		PI_instance.compute(((CarMessages.v - TVI.velocity()) / 1.0[kmh]), K, TN); // Main/calc 12
-		PID_instance_2.reset(0.0); // Main/calc 13
-		PID_instance_2.compute(((CarMessages.v - TVI.velocity()) / 1.0[kmh]), K, TV, TN); // Main/calc 14
-		ctl = (if PIDactive then PID_instance_2.value() else PI_instance.value()); // Main/calc 15
-		CCFS.ctrl = ctl; // Main/calc 16
-		CarMessages.power = CCFS.pw; // Main/calc 17
-		DriverMessages.display = CCFS.on; // Main/calc 18
-		CarMessages.recuperation = CCFS.br; // Main/calc 19
+		PI_instance.compute(((CarMessages.v - TVI.velocity()) / 1.0[kmh]), K, TN); // Main/calc 11
+		PID_instance_2.compute(((CarMessages.v - TVI.velocity()) / 1.0[kmh]), K, TV, TN); // Main/calc 12
+		ctl = max(min((if PIDactive then PID_instance_2.value() else PI_instance.value()), 100.0), -100.0); // Main/calc 13
+		CCFS.ctrl = ctl; // Main/calc 14
+		CarMessages.power = CCFS.pw; // Main/calc 15
+		DriverMessages.display = CCFS.on; // Main/calc 16
+		CarMessages.recuperation = CCFS.br; // Main/calc 17
 	}
 }

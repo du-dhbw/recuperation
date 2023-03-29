@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 3347068501
+		         /* programm id */ 3472895437
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -98,20 +98,6 @@
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 1 1000 0
 			/end IF_DATA
 		/end MEASUREMENT
-
-		/begin CHARACTERISTIC myCar.myCar.myDrive_instance.Drivetrain_instance.Battery_inst.weight
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 7 1001 0 1001 0 1001 5 1000 0 1000 0 1000 1 1000 1
-			/end IF_DATA
-		/end CHARACTERISTIC
 
 		/begin MEASUREMENT myCar.myCar.myDrive_instance.Drivetrain_instance.BM_inst.sm
 			/* long identifier    */ ""
@@ -599,7 +585,7 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT myCar.myCar.myDrive_instance.kmstand
+		/begin MEASUREMENT myCar.myCar.myDrive_instance.mileage
 			/* long identifier    */ ""
 			/* datatype           */ FLOAT32_IEEE
 			/* conversion         */ esdl_ident
@@ -1586,7 +1572,7 @@
 				myCar.myCar.myDrive_instance.AirFriction
 			/end DEF_CHARACTERISTIC
 			/begin LOC_MEASUREMENT
-				myCar.myCar.myDrive_instance.kmstand
+				myCar.myCar.myDrive_instance.mileage
 				myCar.myCar.myDrive_instance.v
 			/end LOC_MEASUREMENT
 			/begin SUB_FUNCTION
@@ -1613,9 +1599,6 @@
 		/end FUNCTION
 		/begin FUNCTION myCar.myCar.myDrive_instance.Drivetrain_instance.Battery_inst
 			""
-			/begin DEF_CHARACTERISTIC
-				myCar.myCar.myDrive_instance.Drivetrain_instance.Battery_inst.weight
-			/end DEF_CHARACTERISTIC
 			/begin LOC_MEASUREMENT
 				myCar.myCar.myDrive_instance.Drivetrain_instance.Battery_inst.battery
 			/end LOC_MEASUREMENT
@@ -1691,7 +1674,6 @@
 				resources.DriverMessages.power
 			/end IN_MEASUREMENT
 			/begin OUT_MEASUREMENT
-				resources.CarMessages.brake
 				resources.CarMessages.power
 				resources.CarMessages.recuperation
 				resources.DriverMessages.display
@@ -2008,7 +1990,7 @@
 				myCar.myCar.myDrive_instance.AirFriction
 			/end REF_CHARACTERISTIC
 			/begin REF_MEASUREMENT
-				myCar.myCar.myDrive_instance.kmstand
+				myCar.myCar.myDrive_instance.mileage
 				myCar.myCar.myDrive_instance.v
 			/end REF_MEASUREMENT
 			/begin SUB_GROUP
@@ -2047,9 +2029,6 @@
 		/end GROUP
 		/begin GROUP myCar.myCar.myDrive_instance.Drivetrain_instance.Battery_inst
 			""
-			/begin REF_CHARACTERISTIC
-				myCar.myCar.myDrive_instance.Drivetrain_instance.Battery_inst.weight
-			/end REF_CHARACTERISTIC
 			/begin REF_MEASUREMENT
 				myCar.myCar.myDrive_instance.Drivetrain_instance.Battery_inst.battery
 			/end REF_MEASUREMENT

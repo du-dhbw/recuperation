@@ -220,7 +220,7 @@ blockdiagramSpecification Main {
 		}
 		elementCall (myCar.CrawlingManager.driverPower) {
 			argumentPin at (left, 1) connection_71
-			sequenceCall at (-170, -24) {
+			sequenceCall at (-110, -44) {
 				inPin connection_70
 			}
 		}

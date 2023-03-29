@@ -2,7 +2,7 @@ classType myCar.CCF
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_14, connection_16, connection_23, connection_25, connection_27, connection_29, connection_49, connection_51, connection_53, connection_44, connection_90, connection_94, connection_117, connection_115, connection_113, connection_119, connection_45, connection_59, connection_102
+			connection_14, connection_16, connection_23, connection_25, connection_27, connection_29, connection_49, connection_51, connection_53, connection_44, connection_94, connection_115, connection_130, connection_119, connection_45, connection_59, connection_102
 		}
 	}
 	simpleIdentifier resources.DriverMessages.on at (21, 165) {
@@ -232,7 +232,7 @@ blockdiagramSpecification Main {
 		}
 		elementCall (myCar.CCFState.ctrl) {
 			argumentPin at (top, 1) connection_120 {
-				bendpoints (0, 112), (-470, 112)
+				bendpoints (0, 110), (-630, 110)
 			}
 			sequenceCall at (-44, -20) {
 				inPin connection_119
@@ -263,11 +263,8 @@ blockdiagramSpecification Main {
 			}
 		}
 		methodCall SystemLib.Transferfunction.Control.PI.reset {
-			argumentPin initValue at (bottom, 3) connection_91 {
-				bendpoints (0, -10)
-			}
-			sequenceCall at (-14, 21) {
-				inPin connection_90
+			argumentPin initValue at (bottom, 3) sequenceCall at (-14, 21) {
+				inPin
 			}
 		}
 		methodCall SystemLib.Transferfunction.Control.PI.value {
@@ -315,11 +312,6 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	literal Numeric "0.0" at (731, 3) size (49, 0) {
-		outPin {
-			connection_91
-		}
-	}
 	division at (661, 26) {
 		inPin connection_93 {
 			bendpoints (10, 0)
@@ -336,16 +328,16 @@ blockdiagramSpecification Main {
 			connection_92
 		}
 	}
-	simpleIdentifier ctl at (1011, 175) {
+	simpleIdentifier ctl at (1171, 175) {
 		label at (0, -1)
-		inPin connection_114 {
-			bendpoints (30, 0)
+		inPin connection_131 {
+			bendpoints (20, 0)
 		}
 		outPin {
 			connection_120
 		}
 		sequenceCall {
-			inPin connection_113
+			inPin connection_130
 		}
 	}
 	simpleIdentifier resources.CarMessages.recuperation at (841, 365) {
@@ -373,11 +365,8 @@ blockdiagramSpecification Main {
 			}
 		}
 		methodCall SystemLib.Transferfunction.Control.PID.reset {
-			argumentPin initValue at (bottom, 3) connection_118 {
-				bendpoints (70, 0)
-			}
-			sequenceCall at (-14, 21) {
-				inPin connection_117
+			argumentPin initValue at (bottom, 3) sequenceCall at (-14, 21) {
+				inPin
 			}
 		}
 		methodCall SystemLib.Transferfunction.Control.PID.value {
@@ -400,7 +389,7 @@ blockdiagramSpecification Main {
 			bendpoints (40, 0)
 		}
 		outPin {
-			connection_114
+			connection_133
 		}
 	}
 	simpleIdentifier K at (741, 125) {
@@ -430,11 +419,6 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	literal Numeric "0.0" at (691, 243) size (49, 0) {
-		outPin {
-			connection_118
-		}
-	}
 	simpleIdentifier PIDactive at (941, 15) {
 		label at (-20, -1)
 		outPin {
@@ -442,6 +426,38 @@ blockdiagramSpecification Main {
 		}
 		sequenceCall {
 			inPin
+		}
+	}
+	minimum at (1061, 156) {
+		inPin connection_133 {
+			bendpoints (0, -20)
+		}
+		inPin connection_134 {
+			bendpoints (20, 0)
+		}
+		outPin {
+			connection_132
+		}
+	}
+	maximum at (1111, 186) {
+		inPin connection_132 {
+			bendpoints (10, 0)
+		}
+		inPin connection_135 {
+			bendpoints (20, 0)
+		}
+		outPin {
+			connection_131
+		}
+	}
+	literal Numeric "100.0" at (991, 183) size (49, 0) {
+		outPin {
+			connection_134
+		}
+	}
+	literal Numeric "-100.0" at (1041, 213) size (49, 0) {
+		outPin {
+			connection_135
 		}
 	}
 }

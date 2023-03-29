@@ -4,6 +4,7 @@ import resources.curve_recup_a;
 import resources.kmh;
 import resources.m;
 import resources.map_real_kmh;
+import resources.s;
 
 class Drivetrain {
 	characteristic curve_recup_a RecuperationAccel[2] = {{0.0[kmh], 160.0[kmh]}, {0.0[a], -0.04[a]}};
@@ -15,7 +16,7 @@ class Drivetrain {
 	boolean batteryEmpty = false;
 	CrawlingManager CM_inst;
 
-	@generated("blockdiagram", "42f61ee5")
+	@generated("blockdiagram", "21724f3b")
 	public a drive(real in powerCtrl, real in recupCtrl, kmh in v, m in ds) {
 		CM_inst.v = v; // Main/drive 1
 		CM_inst.batteryEmpty = batteryEmpty; // Main/drive 2

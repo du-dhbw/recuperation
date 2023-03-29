@@ -25,9 +25,9 @@ static class DistanceTest {
 	characteristic real power = 50.0;
 	
 	/* PI(D) controller variables */
-	characteristic real K = -1.9;
+	characteristic real K = -45.9;
 	characteristic real TV = 0.01;
-	characteristic real TN = 1.10;
+	characteristic real TN = 10.10;
 	
 	PI PI_instance;
 	PID PID_instance_2;
@@ -56,7 +56,7 @@ static class DistanceTest {
 			}
 		}
 		
-		logger.log(17800002.2, tester.odo_inst.odometer / 1.0 [km]);
+		logger.log(17800102.2, tester.odo_inst.odometer / 1.0 [km]);
 	}
 	
 	@Test
@@ -84,7 +84,7 @@ static class DistanceTest {
 			
 		}
 		
-		logger.log(17800102.2, tester.odo_inst.odometer / 1.0 [km]);
+		logger.log(17800002.2, tester.odo_inst.odometer / 1.0 [km]);
 	}
 	
 	@Test
@@ -129,9 +129,15 @@ static class DistanceTest {
 		while (!tester.Drivetrain_instance.batteryEmpty) {
 			real val = pidController(tester.v, 70.0[kmh]);
 			if (val > 0.0) {
+				if (val > 100.0) {
+					val = 100.0;
+				}
 				tester.move(val, 0.0, 0.0, move_mydt, move_myg);
 			}
 			else if (val < 0.0) {
+				if (val < -100.0) {
+					val = -100.0;
+				}
 				tester.move(0.0, 0.0, -val, move_mydt, move_myg);
 			}
 			else {
@@ -155,13 +161,11 @@ static class DistanceTest {
 	}
 	
 	real piController(kmh currentSpeed, kmh setSpeed) {
-		PI_instance.reset(0.0); // Main/calc 13
 		PI_instance.compute(((currentSpeed - setSpeed) / 1.0[kmh]), K, TN);
 		return PI_instance.value();
 	}
 	
 	real pidController(kmh currentSpeed, kmh setSpeed) {
-		PID_instance_2.reset(0.0);
 		PID_instance_2.compute(((currentSpeed - setSpeed) / 1.0[kmh]), K, TV, TN);
 		return PID_instance_2.value();
 	}

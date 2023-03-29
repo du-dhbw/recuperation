@@ -35,7 +35,7 @@
           </children>
           <styles xsi:type="notation:ShapeStyle" xmi:id="_CkTTQcl2Ee2WkM_l_FElFA" fontName="Verdana" fillColor="0" lineColor="16777215"/>
           <styles xsi:type="notation:NamedStyle" xmi:id="_CkTTQsl2Ee2WkM_l_FElFA" name="allowColors"/>
-          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_CkT6Vsl2Ee2WkM_l_FElFA" x="51" y="10"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_CkT6Vsl2Ee2WkM_l_FElFA" x="99" y="34"/>
         </children>
         <children xmi:id="_CkVvgcl2Ee2WkM_l_FElFA" type="State" element="_CkVvgMl2Ee2WkM_l_FElFA">
           <children xsi:type="notation:DecorationNode" xmi:id="_CkWWkMl2Ee2WkM_l_FElFA" type="StateName">

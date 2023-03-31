@@ -2,7 +2,7 @@ classType myCar.CCF
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_14, connection_16, connection_23, connection_25, connection_27, connection_29, connection_49, connection_51, connection_53, connection_44, connection_94, connection_115, connection_130, connection_119, connection_45, connection_59, connection_102
+			connection_14, connection_16, connection_23, connection_25, connection_27, connection_29, connection_156, connection_49, connection_51, connection_53, connection_44, connection_45, connection_102, connection_59
 		}
 	}
 	simpleIdentifier resources.DriverMessages.on at (21, 165) {
@@ -14,16 +14,16 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.power at (831, 325) {
+	simpleIdentifier resources.CarMessages.power at (901, 335) {
 		label at (0, -1)
 		inPin connection_46 {
-			bendpoints (30, 0), (30, -20)
+			bendpoints (40, 0)
 		}
 		sequenceCall at (-10, -14) {
 			inPin connection_45
 		}
 	}
-	simpleIdentifier resources.DriverMessages.brake at (461, 375) {
+	simpleIdentifier resources.DriverMessages.brake at (531, 375) {
 		label at (0, -1)
 		outPin {
 			connection_52
@@ -32,7 +32,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier resources.DriverMessages.power at (461, 345) {
+	simpleIdentifier resources.DriverMessages.power at (531, 345) {
 		label at (0, -1)
 		outPin {
 			connection_50
@@ -68,7 +68,7 @@ blockdiagramSpecification Main {
 		}
 		methodCall myCar.TargetVelocity.velocity {
 			returnPin at (right, 3) {
-				connection_125
+				connection_154
 			}
 			sequenceCall {
 				inPin
@@ -179,7 +179,7 @@ blockdiagramSpecification Main {
 			inPin connection_29
 		}
 	}
-	complexIdentifier CCFS at (571, 331) size (20, 8) {
+	complexIdentifier CCFS at (651, 341) size (20, 8) {
 		label at (40, -19)
 		methodCall myCar.CCFState.cCFStateStatemachineTrigger {
 			methodVoidPin at (top, 4) sequenceCall at (6, -20) {
@@ -187,14 +187,18 @@ blockdiagramSpecification Main {
 			}
 		}
 		elementCall (myCar.CCFState.pow) {
-			argumentPin at (left, 1) connection_50
-			sequenceCall at (-150, -4) {
+			argumentPin at (left, 1) connection_50 {
+				bendpoints (70, 0)
+			}
+			sequenceCall at (-80, -4) {
 				inPin connection_49
 			}
 		}
 		elementCall (myCar.CCFState.bra) {
-			argumentPin at (left, 4) connection_52
-			sequenceCall at (-150, -4) {
+			argumentPin at (left, 4) connection_52 {
+				bendpoints (70, 0)
+			}
+			sequenceCall at (-80, -4) {
 				inPin connection_51
 			}
 		}
@@ -224,240 +228,57 @@ blockdiagramSpecification Main {
 		}
 		elementCall (myCar.CCFState.act) {
 			argumentPin at (left, 6) connection_54 {
-				bendpoints (40, 0), (40, 30), (-130, 30), (-130, 230)
+				bendpoints (40, 0), (40, 30), (-130, 30), (-130, 240)
 			}
 			sequenceCall at (-30, 16) {
 				inPin connection_53
 			}
 		}
 		elementCall (myCar.CCFState.ctrl) {
-			argumentPin at (top, 1) connection_120 {
-				bendpoints (0, 110), (-630, 110)
-			}
+			argumentPin at (top, 1) connection_157
 			sequenceCall at (-44, -20) {
-				inPin connection_119
+				inPin connection_156
 			}
 		}
 	}
-	simpleIdentifier resources.DriverMessages.display at (831, 405) {
+	simpleIdentifier resources.DriverMessages.display at (901, 415) {
 		label at (0, -1)
 		inPin connection_60 {
-			bendpoints (20, 0), (20, 20)
+			bendpoints (40, 0)
 		}
 		sequenceCall at (-10, -14) {
 			inPin connection_59
 		}
 	}
-	complexIdentifier PI_instance at (741, -79) size (12, 6) backgroundColor #ffffff {
-		label at (0, 1)
-		methodCall SystemLib.Transferfunction.Control.PI.compute {
-			argumentPin val at (left, 2) connection_95 {
-				bendpoints (0, -90)
-			}
-			argumentPin K at (top, 1) connection_84
-			argumentPin T at (top, 5) connection_85 {
-				bendpoints (0, 30)
-			}
-			sequenceCall at (-70, -14) {
-				inPin connection_94
-			}
-		}
-		methodCall SystemLib.Transferfunction.Control.PI.reset {
-			argumentPin initValue at (bottom, 3) sequenceCall at (-14, 21) {
-				inPin
-			}
-		}
-		methodCall SystemLib.Transferfunction.Control.PI.value {
-			returnPin at (right, 2) {
-				connection_112
-			}
-			sequenceCall {
-				inPin
-			}
-		}
-	}
-	simpleIdentifier K at (671, -95) {
-		label at (0, -1)
-		outPin {
-			connection_84
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier TN at (771, -115) {
-		label at (0, -1)
-		outPin {
-			connection_85
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	subtraction at (611, 16) {
-		inPin connection_124
-		inPin connection_125 {
-			bendpoints (0, -170)
-		}
-		outPin {
-			connection_93
-		}
-	}
-	simpleIdentifier resources.CarMessages.v at (511, 15) {
-		label at (0, -1)
-		outPin {
-			connection_124
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	division at (661, 26) {
-		inPin connection_93 {
-			bendpoints (10, 0)
-		}
-		inPin connection_92 {
-			bendpoints (0, -30)
-		}
-		outPin {
-			connection_116, connection_95
-		}
-	}
-	literal unit resources.kmh "1.0" at (591, 73) size (49, 0) {
-		outPin {
-			connection_92
-		}
-	}
-	simpleIdentifier ctl at (1171, 175) {
-		label at (0, -1)
-		inPin connection_131 {
-			bendpoints (20, 0)
-		}
-		outPin {
-			connection_120
-		}
-		sequenceCall {
-			inPin connection_130
-		}
-	}
-	simpleIdentifier resources.CarMessages.recuperation at (841, 365) {
+	simpleIdentifier resources.CarMessages.recuperation at (901, 375) {
 		label at (0, -1)
 		inPin connection_103
-		sequenceCall {
+		sequenceCall at (0, -14) {
 			inPin connection_102
 		}
 	}
-	complexIdentifier PID_instance_2 at (771, 161) size (12, 7) backgroundColor #ffffff {
+	simpleIdentifier resources.CarMessages.v at (461, 135) {
+		label at (0, -1)
+		outPin {
+			connection_155
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier CCFControl at (521, 151) size (14, 8) {
 		label at (0, 1)
-		methodCall SystemLib.Transferfunction.Control.PID.compute {
-			argumentPin val at (left, 2) connection_116 {
-				bendpoints (0, 150)
+		methodCall myCar.CCFControllers.calc {
+			argumentPin setSpeed at (left, 5) connection_154
+			argumentPin velocity at (left, 1) connection_155 {
+				bendpoints (0, 30)
 			}
-			argumentPin K at (top, 1) connection_107 {
-				bendpoints (10, 0)
-			}
-			argumentPin TV at (top, 5) connection_109
-			argumentPin TN at (top, 6) connection_110 {
-				bendpoints (10, 0)
-			}
-			sequenceCall at (-70, -36) {
-				inPin connection_115
-			}
-		}
-		methodCall SystemLib.Transferfunction.Control.PID.reset {
-			argumentPin initValue at (bottom, 3) sequenceCall at (-14, 21) {
-				inPin
-			}
-		}
-		methodCall SystemLib.Transferfunction.Control.PID.value {
-			returnPin at (right, 2) {
-				connection_111
+			returnPin at (right, 0) {
+				connection_157
 			}
 			sequenceCall {
 				inPin
 			}
-		}
-	}
-	conditionalSelect at (941, 151) {
-		inPin connection_112 {
-			bendpoints (40, 0), (40, 220)
-		}
-		inPin CASE_CONDITION connection_121 {
-			bendpoints (0, 131)
-		}
-		inPin connection_111 {
-			bendpoints (40, 0)
-		}
-		outPin {
-			connection_133
-		}
-	}
-	simpleIdentifier K at (741, 125) {
-		label at (0, -1)
-		outPin {
-			connection_107
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier TV at (791, 125) {
-		label at (0, -1)
-		outPin {
-			connection_109
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier TN at (791, 95) {
-		label at (0, -1)
-		outPin {
-			connection_110
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier PIDactive at (941, 15) {
-		label at (-20, -1)
-		outPin {
-			connection_121
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	minimum at (1061, 156) {
-		inPin connection_133 {
-			bendpoints (0, -20)
-		}
-		inPin connection_134 {
-			bendpoints (20, 0)
-		}
-		outPin {
-			connection_132
-		}
-	}
-	maximum at (1111, 186) {
-		inPin connection_132 {
-			bendpoints (10, 0)
-		}
-		inPin connection_135 {
-			bendpoints (20, 0)
-		}
-		outPin {
-			connection_131
-		}
-	}
-	literal Numeric "100.0" at (991, 183) size (49, 0) {
-		outPin {
-			connection_134
-		}
-	}
-	literal Numeric "-100.0" at (1041, 213) size (49, 0) {
-		outPin {
-			connection_135
 		}
 	}
 }

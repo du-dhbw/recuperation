@@ -1,0 +1,279 @@
+classType myCar.CCFControllers
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_17, connection_19, connection_22
+		}
+	}
+	minimum at (531, 296) {
+		inPin connection_14 {
+			bendpoints (0, 30)
+		}
+		inPin connection_15 {
+			bendpoints (20, 0)
+		}
+		outPin {
+			connection_1
+		}
+	}
+	maximum at (581, 326) {
+		inPin connection_1 {
+			bendpoints (10, 0)
+		}
+		inPin connection_7 {
+			bendpoints (20, 0)
+		}
+		outPin {
+			connection_23
+		}
+	}
+	simpleIdentifier K at (141, 45) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier K at (181, 185) {
+		label at (0, -1)
+		outPin {
+			connection_3
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier PI_instance at (221, 71) size (12, 6) backgroundColor #ffffff {
+		label at (0, 1)
+		methodCall SystemLib.Transferfunction.Control.PI.compute {
+			argumentPin val at (left, 2) connection_20 {
+				bendpoints (0, -90)
+			}
+			argumentPin K at (top, 1) connection_2 {
+				bendpoints (60, 0)
+			}
+			argumentPin T at (top, 5) connection_13 {
+				bendpoints (0, 30)
+			}
+			sequenceCall at (-70, -30) {
+				inPin connection_19
+			}
+		}
+		methodCall SystemLib.Transferfunction.Control.PI.reset {
+			argumentPin initValue at (bottom, 3) sequenceCall at (0, 6) {
+				inPin
+			}
+		}
+		methodCall SystemLib.Transferfunction.Control.PI.value {
+			returnPin at (right, 2) {
+				connection_4
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+	}
+	greater at (81, 286) {
+		inPin connection_28
+		inPin connection_27 {
+			bendpoints (30, 0)
+		}
+		outPin {
+			connection_5
+		}
+	}
+	simpleIdentifier sillyBrake at (121, 375) {
+		label at (0, -1)
+		outPin {
+			connection_6
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal Numeric "-100.0" at (511, 353) size (49, 0) {
+		outPin {
+			connection_7
+		}
+	}
+	conditionalSelect at (231, 331) {
+		inPin connection_16
+		inPin CASE_CONDITION connection_5 {
+			bendpoints (0, 20), (130, 20)
+		}
+		inPin connection_6 {
+			bendpoints (70, 0)
+		}
+		outPin {
+			connection_8
+		}
+	}
+	simpleIdentifier TN at (231, 155) {
+		label at (0, -1)
+		outPin {
+			connection_9
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier TV at (231, 185) {
+		label at (0, -1)
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier PID_instance_2 at (221, 231) size (12, 7) backgroundColor #ffffff {
+		label at (0, 1)
+		methodCall SystemLib.Transferfunction.Control.PID.compute {
+			argumentPin val at (left, 2) connection_18 {
+				bendpoints (0, 70)
+			}
+			argumentPin K at (top, 1) connection_3 {
+				bendpoints (10, 0)
+			}
+			argumentPin TV at (top, 5) connection_10 {
+				bendpoints (0, 30)
+			}
+			argumentPin TN at (top, 6) connection_9 {
+				bendpoints (10, 0)
+			}
+			sequenceCall at (-70, -30) {
+				inPin connection_17
+			}
+		}
+		methodCall SystemLib.Transferfunction.Control.PID.reset {
+			argumentPin initValue at (bottom, 3) sequenceCall at (0, 6) {
+				inPin
+			}
+		}
+		methodCall SystemLib.Transferfunction.Control.PID.value {
+			returnPin at (right, 2) {
+				connection_11
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier activeController at (371, 195) {
+		label at (0, -1)
+		outPin {
+			connection_12
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier TN at (241, 25) {
+		label at (0, -1)
+		outPin {
+			connection_13
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	select integer at (401, 221) size (8, 8) {
+		inPin CASE_CONDITION connection_12 {
+			bendpoints (10, 0)
+		}
+		namedInPin "default" connection_8 {
+			bendpoints (130, 0)
+		}
+		namedInPin "1" connection_4 {
+			bendpoints (0, 150)
+		}
+		namedInPin "2" connection_11 {
+			bendpoints (0, 20)
+		}
+		outPin {
+			connection_14
+		}
+	}
+	literal Numeric "100.0" at (461, 323) size (49, 0) {
+		outPin {
+			connection_15
+		}
+	}
+	simpleIdentifier sillyPower at (121, 345) {
+		label at (0, -1)
+		outPin {
+			connection_16
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	division at (131, 166) {
+		inPin connection_21 {
+			bendpoints (10, 0)
+		}
+		inPin connection_24
+		outPin {
+			connection_20, connection_18
+		}
+	}
+	subtraction at (81, 156) {
+		inPin connection_25 {
+			bendpoints (70, 0)
+		}
+		inPin connection_26
+		outPin {
+			connection_21
+		}
+	}
+	return at (641, 335) {
+		label at (0, 0)
+		inPin connection_23
+		sequenceCall {
+			inPin connection_22
+		}
+	}
+	literal unit resources.kmh "1.0" at (81, 203) size (49, 0) {
+		outPin {
+			connection_24
+		}
+	}
+	methodArgumentIdentifier calc.velocity at (-29, 145) {
+		label at (0, -1)
+		outPin {
+			connection_25
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.setSpeed at (-29, 175) {
+		label at (0, -1)
+		outPin {
+			connection_26
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.velocity at (11, 315) {
+		label at (0, -1)
+		outPin {
+			connection_27
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.setSpeed at (11, 285) {
+		label at (0, -1)
+		outPin {
+			connection_28
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

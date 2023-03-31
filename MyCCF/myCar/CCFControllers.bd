@@ -84,10 +84,10 @@ blockdiagramSpecification Main {
 			connection_5
 		}
 	}
-	simpleIdentifier sillyBrake at (121, 375) {
+	simpleIdentifier sillyBrake at (121, 345) {
 		label at (0, -1)
 		outPin {
-			connection_6
+			connection_29
 		}
 		sequenceCall {
 			inPin
@@ -99,11 +99,11 @@ blockdiagramSpecification Main {
 		}
 	}
 	conditionalSelect at (231, 331) {
-		inPin connection_16
+		inPin connection_29
 		inPin CASE_CONDITION connection_5 {
 			bendpoints (0, 20), (130, 20)
 		}
-		inPin connection_6 {
+		inPin connection_30 {
 			bendpoints (70, 0)
 		}
 		outPin {
@@ -201,10 +201,10 @@ blockdiagramSpecification Main {
 			connection_15
 		}
 	}
-	simpleIdentifier sillyPower at (121, 345) {
+	simpleIdentifier sillyPower at (121, 385) {
 		label at (0, -1)
 		outPin {
-			connection_16
+			connection_30
 		}
 		sequenceCall {
 			inPin

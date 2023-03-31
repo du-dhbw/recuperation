@@ -1,9 +1,8 @@
 package myCar;
 import resources.DriverMessages;
-import resources.CarMessages;
 
 static class Driver
-writes DriverMessages.power, DriverMessages.brake, DriverMessages.on, DriverMessages.increment, DriverMessages.decrement, CarMessages.recuperation, DriverMessages.recuperation {
+writes DriverMessages.power, DriverMessages.brake, DriverMessages.on, DriverMessages.increment, DriverMessages.decrement, DriverMessages.recuperation {
 	characteristic real power = 0.0;
 	characteristic real brake = 0.0;
 	characteristic boolean on = false;

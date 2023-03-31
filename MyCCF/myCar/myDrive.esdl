@@ -6,7 +6,6 @@ import resources.kmh;
 import resources.g;
 import resources.a;
 import resources.km;
-import resources.m;
 
 class myDrive {
 	characteristic curve_real_a BrakeMomentuC[6] = {{0.0, 1.0, 40.0, 60.0, 80.0, 100.0}, {0.0[a], 0.0[a], -1.0[a], -2.0[a], -3.0[a], -4.0[a]}};
